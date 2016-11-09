@@ -13,4 +13,3 @@ npm install
 ```
 gulp sass
 ```
-Open `localhost:3000` in browser and develop with hot-reloading page.
