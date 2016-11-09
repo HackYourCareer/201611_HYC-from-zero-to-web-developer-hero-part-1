@@ -1,0 +1,258 @@
+/*
+  Bourbon documentation: http://bourbon.io/docs/
+ */
+/* _____ VARIABLES _____ */
+/*
+
+Syntax for sets:
+---------------------------------------
+$type-colour-200: #; // Lightest value
+$type-colour-300: #;
+$type-colour-400: #;
+$type-colour: #;     // Normal value (500)
+$type-colour-600: #;
+$type-colour-700: #;
+$type-colour-800: #; // Darkest value
+----------------------------------------
+
+*/
+/* _____ COMPABILITY _____ */
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,500,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+.img-click-modal {
+  cursor: pointer; }
+
+/* _____ FONTS _____ */
+@font-face {
+  font-family: 'hyicon';
+  src: url("/raw/fonts/hyicon.eot?vaoee8");
+  src: url("/raw/fonts/hyicon.eot?#iefixvaoee8") format("embedded-opentype"), url("/raw/fonts/hyicon.woff?vaoee8") format("woff"), url("/raw/fonts/hyicon.ttf?vaoee8") format("truetype"), url("/raw/fonts/hyicon.svg?vaoee8#hyicon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class*=" hyicon-"],
+[class^="hyicon-"] {
+  font-family: 'hyicon'; }
+
+.hyicon:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'hyicon';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.hyicon-add:before {
+  content: '\e001'; }
+
+.hyicon-arrow:before {
+  content: '\e002'; }
+
+.hyicon-back:before {
+  content: '\e003'; }
+
+.hyicon-checked:before {
+  content: '\e004'; }
+
+.hyicon-chevron:before {
+  content: '\e005'; }
+
+.hyicon-close:before {
+  content: '\e006'; }
+
+.hyicon-dragdrop:before {
+  content: '\e007'; }
+
+.hyicon-expand:before {
+  content: '\e008'; }
+
+.hyicon-collapse:before {
+  content: '\e009'; }
+
+.hyicon-localization:before {
+  content: '\e00a'; }
+
+.hyicon-grid:before {
+  content: '\e00b'; }
+
+.hyicon-list:before {
+  content: '\e00c'; }
+
+.hyicon-more:before {
+  content: '\e00d'; }
+
+.hyicon-remove:before {
+  content: '\e00e'; }
+
+.hyicon-search:before {
+  content: '\e00f'; }
+
+.hyicon-top:before {
+  content: '\e010'; }
+
+.hyicon-helpoff:before {
+  content: '\e011'; }
+
+.hyicon-helpon:before {
+  content: '\e012'; }
+
+.hyicon-filter:before {
+  content: '\e013'; }
+
+.hyicon-filterremove:before {
+  content: '\e014'; }
+
+.hyicon-sort:before {
+  content: '\e015'; }
+
+/* _____ MIXINS _____ */
+/* _____ NORMALIZE _____ */
+body {
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
+  /* Hack to force all relatively and absolutely positioned elements still render while scrolling
+     Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  body > * {
+    -webkit-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -ms-transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+    transform: translateZ(0px); }
+
+*,
+:after,
+:before {
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0; }
+  *:focus {
+    outline: 0; }
+
+svg ellipse,
+svg line,
+svg path,
+svg polygon,
+svg polyline,
+svg rect {
+  shape-rendering: geometricprecision; }
+
+@media print {
+  svg path {
+    fill: #000 !important; } }
+
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty,
+li:empty,
+ol:empty,
+p:empty,
+ul:empty {
+  display: none; }
+
+/* _____ STATES _____ */
+.IsHidden {
+  display: none; }
+
+/* _____ VARIABLES _____ */
+/*
+
+Syntax for sets:
+---------------------------------------
+$type-colour-200: #; // Lightest value
+$type-colour-300: #;
+$type-colour-400: #;
+$type-colour: #;     // Normal value (500)
+$type-colour-600: #;
+$type-colour-700: #;
+$type-colour-800: #; // Darkest value
+----------------------------------------
+
+*/
+/* _____ VARIABLES _____ */
+/*
+
+Syntax for sets:
+---------------------------------------
+$type-colour-200: #; // Lightest value
+$type-colour-300: #;
+$type-colour-400: #;
+$type-colour: #;     // Normal value (500)
+$type-colour-600: #;
+$type-colour-700: #;
+$type-colour-800: #; // Darkest value
+----------------------------------------
+
+*/
+/* _____ BASIC STYLES _____ */
+body,
+html {
+  position: relative; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #313440;
+  background: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem; }
+  body * {
+    -webkit-text-size-adjust: none; }
+
+*::selection {
+  /* WebKit/Blink Browsers */
+  background: #0486e0;
+  color: #fff; }
+
+*::-moz-selection {
+  /* Gecko Browsers */
+  background: #0486e0;
+  color: #fff; }
+
+/*
+  This directory defines the basic building blocks of the website, including paragraphs, tables, images and links.
+  Therefore, this directory should focus only on default HTML elements. These components are called quarks, and they are only basic HTML tags (without classes or IDs).
+*/
+/* _____ VARIABLES _____ */
+/*
+
+Syntax for sets:
+---------------------------------------
+$type-colour-200: #; // Lightest value
+$type-colour-300: #;
+$type-colour-400: #;
+$type-colour: #;     // Normal value (500)
+$type-colour-600: #;
+$type-colour-700: #;
+$type-colour-800: #; // Darkest value
+----------------------------------------
+
+*/
+/* _____ ANCHORS _____ */
+a {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: color 300ms ease-in-out;
+  -moz-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out; }
+  a:active, a:focus, a:hover {
+    text-decoration: none; }
