@@ -4,5 +4,10 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "init": "npm install && bower install",
+    "compile": "gulp sass",
+    "watch": "gulp sass:watch"
   }
 }
