@@ -1,6 +1,6 @@
 # From zero to Web Developer Hero - part 1
 
-Source code from "From zero to Web Developer Hero - part 1" lecture.
+Source code from ["From zero to Web Developer Hero - part 1"](https://www.facebook.com/events/304725136578276/) lecture.
 
 ## Prerequisites
 1. [Install Node.js and npm](https://docs.npmjs.com/getting-started/installing-node)
