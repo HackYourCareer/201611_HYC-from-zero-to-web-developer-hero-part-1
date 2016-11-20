@@ -6,7 +6,7 @@
     "gulp": "^3.9.1"
   },
   "scripts": {
-    "init": "npm install && bower install",
+    "init": "yarn && bower install",
     "compile": "gulp sass",
     "watch": "gulp sass:watch"
   }

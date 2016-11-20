@@ -1,31 +1,26 @@
 # From zero to Web Developer Hero - part 1
 
-Source code from "From zero to Web Developer Hero - part 1" lecture.
+Source code from ["From zero to Web Developer Hero - part 1"](https://www.facebook.com/events/304725136578276/) lecture.
 
 ## Prerequisites
-* Install Node.js and npm
-```
-$ npm install npm@latest -g
-```
-In case of any problems, follow [this guide](https://docs.npmjs.com/getting-started/installing-node).
-* Install bower
-```
-$ npm install -g bower
-```
+1. [Install Node.js and npm](https://docs.npmjs.com/getting-started/installing-node)
+2. [Install Yarn](https://yarnpkg.com/en/docs/install)
+3. [Install Bower](https://bower.io/#install-bower)
+4. [Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 
 ## Installation
 ```
 git clone https://github.com/SAPHybrisGliwice/from-zero-to-web-developer-hero-part-1.git
 cd from-zero-to-web-developer-hero-part-1
-npm run init
+yarn run init
 ```
 
-## SaSS compilation into CSS
+## Compile Sass to CSS
 ```
-npm run compile
+yarn run compile
 ```
 
-## SaSS watch
+## Sass watch
 ```
-npm run watch
+yarn run watch
 ```
