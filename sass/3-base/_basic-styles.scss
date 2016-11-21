@@ -17,6 +17,12 @@ html {
 }
 
 body {
+    background: #fff;
+    font      : {
+        family: $font-open-sans;
+        weight: 400;
+    }
+
     & * {
         -webkit-text-size-adjust: none;
     }

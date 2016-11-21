@@ -5,6 +5,7 @@
 a {
     cursor         : pointer;
     text-decoration: none;
+    transition     : $transition-default;
 
     &:active,
     &:focus,

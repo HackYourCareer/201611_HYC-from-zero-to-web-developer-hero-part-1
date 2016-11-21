@@ -1,0 +1,15 @@
+@import './1-tools/variables';
+
+/* _____ FILTER _____ */
+
+.m-filter {
+  &__list {
+    list-style-type: none;
+    @include flex-container(center, center, row, wrap);
+  }
+
+  &__item {
+    $m-filter__item-base: (100/6)*1%;
+    @include flex(1 0 $m-filter__item-base);
+  }
+}

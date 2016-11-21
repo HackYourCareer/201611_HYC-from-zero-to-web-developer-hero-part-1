@@ -1,0 +1,118 @@
+@import '../bourbon/bourbon';
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ GRID _____ */
+// Grid system
+
+// Component variables
+$g-container--screen-lg-padding: 0 5rem;
+
+$g-item-margin-left: 2rem;
+$g-item-margin-bottom: 2rem;
+
+.g-container {
+    @include flex-container(center, center, row, wrap);
+
+    &--screen-lg {
+        width    : 100%;
+        max-width: $screen-lg;
+        padding  : $g-container--screen-lg-padding;
+    }
+
+    &--space-between {
+        @include justify-content(space-between);
+    }
+
+    &--nowrap {
+        @include flex-wrap(nowrap);
+    }
+
+    &--column {
+        @include flex-direction(column);
+    }
+}
+
+.g-item {
+    margin-left: $g-item-margin-left;
+
+    &--col-1 {
+        $g-item-col-1-base: (60/1100) * 100%;
+        @include flex(1 0 $g-item-col-1-base);
+    }
+
+    &--col-2 {
+        $g-item-col-2-base: (140/1100) * 100%;
+        @include flex(1 0 $g-item-col-2-base);
+    }
+
+    &--col-3 {
+        $g-item-col-3-base: (220/1100) * 100%;
+        @include flex(1 0 $g-item-col-3-base);
+    }
+
+    &--col-4 {
+        $g-item-col-4-base: (300/1100) * 100%;
+        @include flex(1 0 $g-item-col-4-base);
+    }
+
+    &--col-5 {
+        $g-item-col-5-base: (380/1100) * 100%;
+        @include flex(1 0 $g-item-col-5-base);
+    }
+
+    &--col-6 {
+        $g-item-col-6-base: (460/1100) * 100%;
+        @include flex(1 0 $g-item-col-6-base);
+    }
+
+    &--col-7 {
+        $g-item-col-7-base: (540/1100) * 100%;
+        @include flex(1 0 $g-item-col-7-base);
+    }
+
+    &--col-8 {
+        $g-item-col-8-base: (620/1100) * 100%;
+        @include flex(1 0 $g-item-col-8-base);
+    }
+
+    &--col-9 {
+        $g-item-col-9-base: (700/1100) * 100%;
+        @include flex(1 0 $g-item-col-9-base);
+    }
+
+    &--col-10 {
+        $g-item-col-10-base: (780/1100) * 100%;
+        @include flex(1 0 $g-item-col-10-base);
+    }
+
+    &--col-11 {
+        $g-item-col-11-base: (860/1100) * 100%;
+        @include flex(1 0 $g-item-col-11-base);
+    }
+
+    &--col-12 {
+        $g-item-col-12-base: (940/1100) * 100%;
+        @include flex(1 0 $g-item-col-12-base);
+    }
+
+    &--col-13 {
+        $g-item-col-13-base: (1020/1100) * 100%;
+        @include flex(1 0 $g-item-col-13-base);
+    }
+
+    &--col-14 {
+        $g-item-col-13-base: 100%;
+        margin-left        : 0;
+        @include flex(1 0 $g-item-col-13-base);
+    }
+
+    &--has-no-margin-left,
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &--has-margin-bottom {
+        margin-bottom: $g-item-margin-bottom;
+    }
+}

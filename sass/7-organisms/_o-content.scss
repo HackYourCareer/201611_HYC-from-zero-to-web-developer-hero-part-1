@@ -1,0 +1,23 @@
+@import './1-tools/variables';
+
+/* _____ CONTENT _____ */
+
+// Component variables
+$content-margin: 11rem 0 0;
+
+$content__container-padding-top: 6rem;
+$content__container-padding-bottom: 6rem;
+$content__container-background: $background-secondary;
+
+.o-content {
+    margin: $content-margin;
+    @include flex-container();
+
+    &__container {
+        padding   : {
+            top   : $content__container-padding-top;
+            bottom: $content__container-padding-bottom;
+        }
+        background: $content__container-background;
+    }
+}

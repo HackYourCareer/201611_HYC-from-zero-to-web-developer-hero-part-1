@@ -1,0 +1,12 @@
+@import './1-tools/variables';
+
+/* _____ NAVIGATION _____ */
+
+.m-navigation {
+  &__list {
+    list-style-type: none;
+    @include flex-container(center, center, row, nowrap);
+  }
+
+  &__item {}
+}
