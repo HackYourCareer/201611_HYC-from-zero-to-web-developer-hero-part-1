@@ -31,6 +31,10 @@ $g-item-margin-bottom: 2rem;
     &--column {
         @include flex-direction(column);
     }
+
+    &--stretch {
+        @include align-items(stretch);
+    }
 }
 
 .g-item {
@@ -102,9 +106,9 @@ $g-item-margin-bottom: 2rem;
     }
 
     &--col-14 {
-        $g-item-col-13-base: 100%;
+        $g-item-col-14-base: 100%;
         margin-left        : 0;
-        @include flex(1 0 $g-item-col-13-base);
+        @include flex(1 0 $g-item-col-14-base);
     }
 
     &--has-no-margin-left,

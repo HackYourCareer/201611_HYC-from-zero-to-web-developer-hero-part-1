@@ -1,0 +1,11 @@
+@import './1-tools/variables';
+
+/* _____ INPUTS _____ */
+
+input[type='checkbox'] {
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}

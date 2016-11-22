@@ -11,6 +11,8 @@ $m-filter__options-background-active: $color-blue-tertiary;
 $m-filter__options-group-padding: 1rem;
 $m-filter__options-group-background: #fff;
 
+$m-filter__checkbox-item-margin: 1rem 0 0;
+
 .m-filter {
     &__list {
         list-style-type: none;
@@ -42,5 +44,13 @@ $m-filter__options-group-background: #fff;
     &__options-group {
         padding   : $m-filter__options-group-padding;
         background: $m-filter__options-group-background;
+    }
+
+    &__checkbox-item {
+        margin: $m-filter__checkbox-item-margin;
+
+        &:first-child {
+            margin: 0;
+        }
     }
 }
