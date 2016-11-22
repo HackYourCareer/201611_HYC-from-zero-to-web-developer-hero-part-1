@@ -2,14 +2,45 @@
 
 /* _____ FILTER _____ */
 
-.m-filter {
-  &__list {
-    list-style-type: none;
-    @include flex-container(center, center, row, wrap);
-  }
+// Component variables
+$m-filter__options-padding: 3rem;
+$m-filter__options-border-color: $color-blue-tertiary;
+$m-filter__options-background: #fff;
+$m-filter__options-background-active: $color-blue-tertiary;
 
-  &__item {
-    $m-filter__item-base: (100/6)*1%;
-    @include flex(1 0 $m-filter__item-base);
-  }
+$m-filter__options-group-padding: 1rem;
+$m-filter__options-group-background: #fff;
+
+.m-filter {
+    &__list {
+        list-style-type: none;
+        @include flex-container(center, flex-start, row, wrap);
+    }
+
+    &__item {
+        margin-left: .3rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+
+    &__options {
+        padding   : $m-filter__options-padding;
+        border    : .1rem solid $m-filter__options-border-color;
+        background: $m-filter__options-background;
+
+        &--is-active {
+            background: $m-filter__options-background-active;
+        }
+    }
+
+    &__options-group {
+        padding   : $m-filter__options-group-padding;
+        background: $m-filter__options-group-background;
+    }
 }

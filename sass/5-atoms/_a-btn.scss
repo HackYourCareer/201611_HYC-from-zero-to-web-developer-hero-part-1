@@ -28,12 +28,13 @@ $btn-lg-font-weight: 400;
 .a-btn {
     transition: $transition-default;
     display   : inline-block;
+    text-align: center;
 
     &--primary {
         color     : $btn-primary-text-color;
         background: $btn-primary-background-color;
 
-        &.active,
+        &.a-btn--is-active,
         &:active,
         &:focus,
         &:hover {
@@ -47,7 +48,7 @@ $btn-lg-font-weight: 400;
         background: $btn-secondary-background-color;
         border    : .1rem solid $btn-secondary-border-color;
 
-        &.active,
+        &.a-btn--is-active,
         &:active,
         &:focus,
         &:hover {

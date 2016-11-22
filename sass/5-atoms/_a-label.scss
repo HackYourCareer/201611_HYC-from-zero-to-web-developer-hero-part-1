@@ -1,0 +1,25 @@
+@import './1-tools/mixins';
+@import './1-tools/variables';
+
+/* _____ LABEL _____ */
+
+// Component variables
+$a-label--primary-text-color: $label-primary;
+$a-label--primary-margin: 1rem 0 0;
+$a-label--primary-font-size: 1.3rem;
+$a-label--primary-font-weight: 600;
+
+.a-label {
+  &--primary {
+    color: $a-label--primary-text-color;
+    font : {
+      size  : $a-label--primary-font-size;
+      weight: $a-label--primary-font-weight;
+    }
+    @include flex-container(center, flex-start, row, nowrap);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
