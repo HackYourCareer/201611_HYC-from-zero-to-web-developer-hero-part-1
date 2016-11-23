@@ -1,0 +1,24 @@
+@import './1-tools/variables';
+
+/* _____ HEADER _____ */
+
+// Component variables
+$a-header--primary-text-color: $header-primary;
+$a-header--primary-line-height: 140%;
+$a-header--primary-letter-spacing: -0.025em;
+$a-header--primary-font-size: 3rem;
+$a-header--primary-font-weight: 500;
+$a-header--primary-margin: 0 0 2.5rem;
+
+.a-header {
+  &--primary {
+    color         : $a-header--primary-text-color;
+    line-height   : $a-header--primary-line-height;
+    letter-spacing: $a-header--primary-letter-spacing;
+    margin        : $a-header--primary-margin;
+    font          : {
+      size  : $a-header--primary-font-size;
+      weight: $a-header--primary-font-weight;
+    }
+  }
+}

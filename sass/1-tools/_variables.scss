@@ -3,58 +3,72 @@
 // Fonts
 // ==========================================================================
 
-// Colors
+$font-open-sans           : 'Open Sans', sans-serif;
+
+// Color sets
 // ==========================================================================
 
-/*
-Syntax for sets:
----------------------------------------
-$type-colour-200: #; // Lightest value
-$type-colour-300: #;
-$type-colour-400: #;
-$type-colour: #;     // Normal value (500)
-$type-colour-600: #;
-$type-colour-700: #;
-$type-colour-800: #; // Darkest value
-----------------------------------------
-*/
+$color-blue-primary       : #1279bf;
+$color-blue-secondary     : #0585de;
+$color-blue-tertiary      : #3799de;
 
-// Generic values
+$color-blue-dark-primary  : #313440;
+
+$color-gray-primary       : #eff4f7;
+
+$color-gray-dark-primary  : #646666;
+$color-gray-dark-secondary: #555555;
+
+// Color variables for common elements
 // ==========================================================================
+
+$background-primary       : $color-blue-primary;
+$background-secondary     : $color-gray-primary;
+$background-tertiary      : #fff;
+
+$header-primary           : $color-blue-secondary;
+
+$text-primary             : $color-blue-dark-primary;
+$text-secondary           : $color-gray-dark-primary;
+
+$link-primary             : $color-blue-primary;
+$link-secondary           : #fff;
+
+$label-primary            : $color-gray-dark-secondary;
+
+// Box shadows
+// ==========================================================================
+
+$box-shadow-default       : 0 .3rem .7rem 0 rgba(0, 0, 0, 0.35);
+
+// Dimensions
+// ==========================================================================
+
+// Z-indexes
+// ==========================================================================
+
+$z-index-top              : 500;
 
 // Transitions
 // ==========================================================================
 
-$transition-default: all 300ms ease-in-out;
+$transition-default       : all 300ms ease-in-out;
 
 // Media queries breakpoints
 // ==========================================================================
 
 // Extra small screen / phone
 // Note: Deprecated $screen-xs and $screen-phone as of v3.0.1
-$screen-xs         : 480px;
-$screen-xs-min     : $screen-xs;
-$screen-phone      : $screen-xs-min;
+$screen-xs                : 480px;
 
 // Small screen / tablet
 // Note: Deprecated $screen-sm and $screen-tablet as of v3.0.1
-$screen-sm         : 768px;
-$screen-sm-min     : $screen-sm;
-$screen-tablet     : $screen-sm-min;
+$screen-sm                : 768px;
 
 // Medium screen / desktop
 // Note: Deprecated $screen-md and $screen-desktop as of v3.0.1
-$screen-md         : 992px;
-$screen-md-min     : $screen-md;
-$screen-desktop    : $screen-md-min;
+$screen-md                : 992px;
 
 // Large screen / wide desktop
 // Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-lg         : 1200px;
-$screen-lg-min     : $screen-lg;
-$screen-lg-desktop : $screen-lg-min;
-
-// So media queries don't overlap when required, provide a maximum
-$screen-xs-max     : ($screen-sm-min - 1);
-$screen-sm-max     : ($screen-md-min - 1);
-$screen-md-max     : ($screen-lg-min - 1);
+$screen-lg                : 1200px;

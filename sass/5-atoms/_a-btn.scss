@@ -1,0 +1,79 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ BUTTONS _____ */
+
+// Component variables
+$btn-primary-text-color: $link-secondary;
+$btn-primary-background-color: $background-primary;
+$btn-primary-text-color-hover: $link-primary;
+$btn-primary-background-color-hover: $background-tertiary;
+
+$btn-secondary-text-color: $text-secondary;
+$btn-secondary-background-color: #fff;
+$btn-secondary-border-color: $color-blue-tertiary;
+$btn-secondary-text-color-hover: #fff;
+$btn-secondary-background-color-hover: $color-blue-tertiary;
+
+$btn-sm-height: 3.8rem;
+$btn-sm-padding: 0 1.4rem;
+$btn-sm-font-size: 1.3rem;
+$btn-sm-font-weight: 700;
+
+$btn-lg-height: 5.5rem;
+$btn-lg-padding: 0 1.8rem;
+$btn-lg-font-size: 2.4rem;
+$btn-lg-font-weight: 400;
+
+.a-btn {
+    transition: $transition-default;
+    display   : inline-block;
+    text-align: center;
+
+    &--primary {
+        color     : $btn-primary-text-color;
+        background: $btn-primary-background-color;
+
+        &.a-btn--is-active,
+        &:active,
+        &:focus,
+        &:hover {
+            color     : $btn-primary-text-color-hover;
+            background: $btn-primary-background-color-hover;
+        }
+    }
+
+    &--secondary {
+        color     : $btn-secondary-text-color;
+        background: $btn-secondary-background-color;
+        border    : .1rem solid $btn-secondary-border-color;
+
+        &.a-btn--is-active,
+        &:active,
+        &:focus,
+        &:hover {
+            color     : $btn-secondary-text-color-hover;
+            background: $btn-secondary-background-color-hover;
+        }
+    }
+
+    &--sm {
+        height : $btn-sm-height;
+        padding: $btn-sm-padding;
+        font   : {
+            size  : $btn-sm-font-size;
+            weight: $btn-sm-font-weight;
+        }
+        @include flex-container(center, center, row, wrap);
+    }
+
+    &--lg {
+        height : $btn-lg-height;
+        padding: $btn-lg-padding;
+        font   : {
+            size  : $btn-lg-font-size;
+            weight: $btn-lg-font-weight;
+        }
+        @include flex-container(center, center, row, wrap);
+    }
+}

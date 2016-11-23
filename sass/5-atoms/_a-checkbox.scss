@@ -1,0 +1,70 @@
+@import './1-tools/mixins';
+@import './1-tools/variables';
+
+/* _____ CHECKBOX _____ */
+
+// Component variables
+$a-checkbox--primary-checked-label-padding-left: 3rem;
+$a-checkbox--primary-width: 2rem;
+$a-checkbox--primary-height: 2rem;
+$a-checkbox--primary-border-color: $color-blue-secondary;
+$a-checkbox--primary-background: #fff;
+$a-checkbox--primary-text-color: $color-blue-secondary;
+$a-checkbox--primary-transition: $transition-default;
+$a-checkbox--primary-font-size: 3rem;
+
+.a-checkbox {
+    &--primary {
+        /* Base for label styling */
+        &:checked,
+        &:not(:checked) {
+            position: absolute;
+            left    : -9999px;
+        }
+
+        &:checked + label,
+        &:not(:checked) + label {
+            position    : relative;
+            padding-left: $a-checkbox--primary-checked-label-padding-left;
+            cursor      : pointer;
+        }
+
+        /* checkbox aspect */
+        &:checked + label:before,
+        &:not(:checked) + label:before {
+            content   : '';
+            position  : absolute;
+            left      : 0;
+            top       : 0;
+            width     : $a-checkbox--primary-width;
+            height    : $a-checkbox--primary-height;
+            border    : 1px solid $a-checkbox--primary-border-color;
+            background: $a-checkbox--primary-background;
+        }
+        /* checked mark aspect */
+        &:checked + label:after,
+        &:not(:checked) + label:after {
+            content    : '•';
+            position   : absolute;
+            left       : 0;
+            top        : 0;
+            width      : $a-checkbox--primary-width;
+            height     : $a-checkbox--primary-height;
+            line-height: $a-checkbox--primary-height;
+            color      : $a-checkbox--primary-text-color;
+            transition : $a-checkbox--primary-transition;
+            font-size  : $a-checkbox--primary-font-size;
+            @include flex-container(center, center, row, wrap);
+        }
+        /* checked mark aspect changes */
+        &:not(:checked) + label:after {
+            opacity  : 0;
+            transform: scale(0);
+        }
+
+        &:checked + label:after {
+            opacity  : 1;
+            transform: scale(1);
+        }
+    }
+}
