@@ -137,34 +137,79 @@
 
                 <h1>Receptury</h1>
 
-                <nav class="m-filter">
+                <nav class="m-filter" id="beer-tabs">
                     <ul class="m-filter__list">
-                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm a-btn--is-active" href="#" title="Zawartość ekstraktu">Zawartość ekstraktu</a></li>
-                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#" title="Zacieranie">Zacieranie</a></li>
-                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#" title="Fermentacja">Fermentacja</a></li>
-                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#" title="Brzeczka nastawna w litrach">Brzeczka nastawna w litrach</a></li>
-                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#" title="Czas gotowania">Czas gotowania</a></li>
+                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-1" title="Zawartość ekstraktu">Zawartość ekstraktu</a></li>
+                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-2" title="Zacieranie">Zacieranie</a></li>
+                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-3" title="Fermentacja">Fermentacja</a></li>
+                        <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-4" title="Brzeczka nastawna w litrach">Brzeczka nastawna w litrach</a></li>
                         <li class="m-filter__item"><input type="search" placeholder="Szukaj.."></li>
                     </ul>
-                    <div class="m-filter__options m-filter__options--is-active g-container">
+
+                    <div class="m-filter__options m-filter__options--is-active g-container" id="beer-tabs-1">
                         <div class="m-filter__options-group g-item g-item--col-3">
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option1" type="checkbox" name="checkbox" value="12,8"><label for="option1" class="a-label a-label--primary">12,8</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option11" type="checkbox" name="checkbox" value="12"><label for="option11" class="a-label a-label--primary">12</label>
                             </p>
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option2" type="checkbox" name="checkbox" value="14"><label for="option2" class="a-label a-label--primary">14</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option12" type="checkbox" name="checkbox" value="13"><label for="option12" class="a-label a-label--primary">13</label>
                             </p>
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option3" type="checkbox" name="checkbox" value="16,5"><label for="option3" class="a-label a-label--primary">16,5</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option13" type="checkbox" name="checkbox" value="15"><label for="option13" class="a-label a-label--primary">15</label>
                             </p>
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option4" type="checkbox" name="checkbox" value="18,5"><label for="option4" class="a-label a-label--primary">18,5</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option14" type="checkbox" name="checkbox" value="16"><label for="option14" class="a-label a-label--primary">16</label>
                             </p>
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option5" type="checkbox" name="checkbox" value="20"><label for="option5" class="a-label a-label--primary">20</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option15" type="checkbox" name="checkbox" value="19"><label for="option15" class="a-label a-label--primary">19</label>
                             </p>
                             <p class="m-filter__checkbox-item">
-                                <input class="a-checkbox a-checkbox--primary" id="option6" type="checkbox" name="checkbox" value="32"><label for="option6" class="a-label a-label--primary">32</label>
+                                <input class="a-checkbox a-checkbox--primary" id="option16" type="checkbox" name="checkbox" value="22"><label for="option16" class="a-label a-label--primary">22</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option17" type="checkbox" name="checkbox" value="24"><label for="option17" class="a-label a-label--primary">24</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="m-filter__options m-filter__options--is-active g-container" id="beer-tabs-2">
+                        <div class="m-filter__options-group g-item g-item--col-3">
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option21" type="checkbox" name="checkbox" value="Infuzyjne"><label for="option21" class="a-label a-label--primary">Infuzyjne</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option22" type="checkbox" name="checkbox" value="Dekokcyjne"><label for="option22" class="a-label a-label--primary">Dekokcyjne</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="m-filter__options m-filter__options--is-active g-container" id="beer-tabs-3">
+                        <div class="m-filter__options-group g-item g-item--col-3">
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option31" type="checkbox" name="checkbox" value="Górna"><label for="option31" class="a-label a-label--primary">Górna</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option32" type="checkbox" name="checkbox" value="Dolna"><label for="option32" class="a-label a-label--primary">Dolna</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="m-filter__options m-filter__options--is-active g-container" id="beer-tabs-4">
+                        <div class="m-filter__options-group g-item g-item--col-3">
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option41" type="checkbox" name="checkbox" value="17"><label for="option41" class="a-label a-label--primary">17</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option42" type="checkbox" name="checkbox" value="21"><label for="option42" class="a-label a-label--primary">21</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option43" type="checkbox" name="checkbox" value="22"><label for="option43" class="a-label a-label--primary">22</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option44" type="checkbox" name="checkbox" value="24"><label for="option44" class="a-label a-label--primary">24</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option45" type="checkbox" name="checkbox" value="28"><label for="option45" class="a-label a-label--primary">28</label>
+                            </p>
+                            <p class="m-filter__checkbox-item">
+                                <input class="a-checkbox a-checkbox--primary" id="option46" type="checkbox" name="checkbox" value="45"><label for="option46" class="a-label a-label--primary">45</label>
                             </p>
                         </div>
                     </div>
@@ -300,6 +345,7 @@
     </footer>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
 
     <script src="js/plugins.js"></script>
     <script src="js/beer-storage.js"></script>

@@ -1,12 +1,12 @@
 let beerStorage = {
     //asks the service for all beers
-    getAllBeers: function() {
+    getAllBeers: function(callback) {
         $.ajax({
             method: 'GET',
             url: 'http://localhost:2403/piwa'
         })
         .done(function(response) {
-            alert(response);
+            callback(response);
         });
     },
     //asks the service for beers which meet criteria defined in filterObj, syntax:
@@ -15,7 +15,7 @@ let beerStorage = {
     //  {filterName2}: [{value1}, {value2}, ...]
     //}
     //
-    getFilteredBeers: function(filterObj) {
+    getFilteredBeers: function(filterObj, callback) {
         let queryString = beerStorageHelper.composeQueryString(filterObj);
 
         $.ajax({
@@ -23,7 +23,7 @@ let beerStorage = {
             url: 'http://localhost:2403/piwa?' + queryString 
         })
         .done(function(response) {
-            alert("Data Saved: " + msg);
+            callback(response);
         });
     }
 
