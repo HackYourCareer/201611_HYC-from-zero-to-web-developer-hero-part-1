@@ -272,15 +272,15 @@
                     <strong>Andrzej Kowalski</strong><br><br> 48-500 Stare Juchy<br> ul. Starego Piwosza 15<br><br> tel. 349 473 962
                 </p>
 
-                <form id="contact" action="" method="post">
+                <form id="contact-form" action="" method="post">
                     <fieldset>
-                        <input placeholder="E-mail" type="email" tabindex="1" required>
+                        <input placeholder="E-mail" type="email" tabindex="1" required id="cf-email">
                     </fieldset>
                     <fieldset>
-                        <textarea placeholder="Wiadomość" tabindex="2" required></textarea>
+                        <textarea placeholder="Wiadomość" tabindex="2" required id="cf-content"></textarea>
                     </fieldset>
                     <fieldset>
-                        <button name="submit" type="submit" id="submit" data-submit="...Wysyłam">WYŚLIJ</button>
+                        <button name="submit" type="submit" id="cf-submit" data-submit="...Wysyłam">WYŚLIJ</button>
                     </fieldset>
                 </form>
 
@@ -302,7 +302,9 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
     <script src="js/plugins.js"></script>
+    <script src="js/beer-storage.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contact-form-validator.js"></script>
 </body>
 
 </html>
