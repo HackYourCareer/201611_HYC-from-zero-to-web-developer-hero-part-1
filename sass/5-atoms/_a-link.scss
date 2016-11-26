@@ -1,0 +1,26 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LINKS _____ */
+
+// Component variables
+$a-link-transition: $transition-default;
+$a-link--primary-text-color: $link-primary;
+$a-link--primary-text-color-hover: #fff;
+$a-link--primary-background-hover: $link-primary;
+
+.a-link {
+    transition: $a-link-transition;
+
+    &--primary {
+        color: $a-link--primary-text-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color          : $a-link--primary-text-color-hover;
+            background     : $a-link--primary-background-hover;
+            text-decoration: none;
+        }
+    }
+}

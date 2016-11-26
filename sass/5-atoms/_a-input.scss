@@ -1,0 +1,31 @@
+@import './1-tools/mixins';
+@import './1-tools/variables';
+
+/* _____ INPUT _____ */
+
+// Component variables
+$a-input--primary-text-color: $input-primary;
+$a-input--primary-background-color: #fff;
+$a-input--primary-background-image: '../img/icons/search.svg';
+$a-input--primary-border-color: $color-gray-light-secondary;
+$a-input--primary-height: 4rem;
+$a-input--primary-padding: 0 4.5rem 0 1.5rem;
+$a-input--primary-font-size: 1.4rem;
+$a-input--primary-font-weight: 700;
+
+.a-input {
+    &--primary {
+        color      : $a-input--primary-text-color;
+        background : $a-input--primary-background-color url($a-input--primary-background-image) no-repeat right 1.3rem center;
+        border     : .1rem solid $a-input--primary-border-color;
+        height     : $a-input--primary-height;
+        line-height: $a-input--primary-height;
+        padding    : $a-input--primary-padding;
+        display    : block;
+        position   : relative;
+        font       : {
+            size  : $a-input--primary-font-size;
+            weight: $a-input--primary-font-weight;
+        }
+    }
+}

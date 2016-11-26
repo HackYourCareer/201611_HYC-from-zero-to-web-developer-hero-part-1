@@ -67,66 +67,70 @@
             <section>
 
                 <div class="g-container g-container--space-between">
-                    <h1>Artykuły</h1>
-                    <input type="search" placeholder="Szukaj..">
+                    <h1 class="a-header a-header--secondary">Artykuły</h1>
+                    <input class="a-input a-input--primary" type="search" placeholder="Szukaj..">
                 </div>
 
-                <div class="g-container g-container--space-between">
+                <div class="g-container g-container--space-between g-container--stretch">
 
-                    <article class="g-item g-item--col-5 g-item--has-margin-bottom">
-                        <header>
-                            <p><time datetime="2016-05-08T16:31:24+02:00">08 / 05 / 2016</time></p>
-                            <h2><a href="#" title="Cechy sensoryczne">Cechy sensoryczne</a></h2>
-                        </header>
-                        <p>
-                            Mauris molestie bibendum magna. Donec tincidunt luctus ante, consequat dictum nisi sollicitudin nec. Nam vitae ex quis eros aliquam posuere. Vivamus egestas velit ac quam egestas fringilla. Quisque pretium ullamcorper purus, ornare imperdiet.
-                        </p>
+                    <article class="m-article g-item g-item--col-5 g-item--has-margin-bottom">
+                        <div class="m-article__content">
+                            <header>
+                                <p class="m-article__date"><time datetime="2016-05-08T16:31:24+02:00">08 / 05 / 2016</time></p>
+                                <h2 class="m-article__title"><a class="a-link a-link--primary" href="#" title="Cechy sensoryczne">Cechy sensoryczne</a></h2>
+                            </header>
+                            <p class="m-article__description">
+                                Mauris molestie bibendum magna. Donec tincidunt luctus ante, consequat dictum nisi sollicitudin nec. Nam vitae ex quis eros aliquam posuere. Vivamus egestas velit ac quam egestas fringilla. Quisque pretium ullamcorper purus, ornare imperdiet.
+                            </p>
+                        </div>
                     </article>
 
-                    <article class="g-item g-item--col-8 g-item--has-margin-bottom">
-                        <div class="g-container">
+                    <article class="m-article g-item g-item--col-8 g-item--has-margin-bottom">
+                        <div class="g-container g-container--align-flex-start">
                             <div class="g-item g-item--col-7">
-                                <a href="#" title="Zrób to sam">
+                                <a class="u-line-height-100" href="#" title="Zrób to sam">
                                     <img src="img/articles/surowce-piwowarskie/surowce-piwowarskie.jpg" width="100%" alt="Zrób to sam">
                                 </a>
                             </div>
-                            <div class="g-item g-item--col-7 g-item--has-no-margin-left">
+                            <div class="m-article__content g-item g-item--col-7 g-item--has-no-margin-left">
                                 <header>
-                                    <p><time datetime="2016-03-22T16:31:24+02:00">22 / 03 / 2016</time></p>
-                                    <h2><a href="#" title="Zrób to sam">Zrób to sam</a></h2>
+                                    <p class="m-article__date"><time datetime="2016-03-22T16:31:24+02:00">22 / 03 / 2016</time></p>
+                                    <h2 class="m-article__title"><a class="a-link a-link--primary" href="#" title="Zrób to sam">Zrób to sam</a></h2>
                                 </header>
-                                <p>Suspendisse nunc eros, dictum sit amet sagittis nec, gravida vel purus. Maecenas erat augue, eleifend non blandit vitae, egestas ut tortor. Mauris dignissim erat ligula, sed porta est ultrices ac. </p>
+                                <p class="m-article__description">Suspendisse nunc eros, dictum sit amet sagittis nec, gravida vel purus. Maecenas erat augue, eleifend non blandit vitae, egestas ut tortor. Mauris dignissim erat ligula. </p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="g-item g-item--col-8 g-item--has-no-margin-left">
-                        <div class="g-container">
+                    <article class="m-article g-item g-item--col-8 g-item--has-no-margin-left">
+                        <div class="g-container g-container--align-flex-start">
                             <div class="g-item g-item--col-7">
-                                <a href="#" title="Surowce piwowarskie">
+                                <a class="u-line-height-100" href="#" title="Surowce piwowarskie">
                                     <img src="img/articles/surowce-piwowarskie/surowce-piwowarskie.jpg" width="100%" alt="Surowce piwowarskie">
                                 </a>
                             </div>
-                            <div class="g-item g-item--col-7 g-item--has-no-margin-left">
+                            <div class="m-article__content g-item g-item--col-7 g-item--has-no-margin-left">
                                 <header>
-                                    <p><time datetime="2016-01-18T16:31:24+02:00">18 / 01 / 2016</time></p>
-                                    <h2><a href="#" title="Surowce piwowarskie">Surowce piwowarskie</a></h2>
+                                    <p class="m-article__date"><time datetime="2016-01-18T16:31:24+02:00">18 / 01 / 2016</time></p>
+                                    <h2 class="m-article__title"><a class="a-link a-link--primary" href="#" title="Surowce piwowarskie">Surowce piwowarskie</a></h2>
                                 </header>
-                                <p>Nam rutrum turpis quis mi vulputate, in suscipit metus congue. Nam ut tortor a nunc condimentum volutpat id quis lacus. Donec et dui metus. Maecenas posuere volutpat mattis. In tellus eros, dictum ac neque vitae, dignissim
-                                    aliquam eros.
+                                <p class="m-article__description">
+                                    Nam rutrum turpis quis mi vulputate, in suscipit metus congue. Nam ut tortor a nunc condimentum volutpat id quis lacus. Donec et dui metus. Maecenas posuere volutpat mattis. In tellus.
                                 </p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="g-item g-item--col-5">
-                        <header>
-                            <p><time datetime="2015-10-14T16:31:24+02:00">14 / 10 / 2015</time></p>
-                            <h2><a href="#" title="Sprzęt piwowara domowego">Sprzęt piwowara domowego</a></h2>
-                        </header>
-                        <p>Fusce velit nisi, dignissim tincidunt odio condimentum, gravida ullamcorper ligula. Aliquam varius urna arcu, auctor mollis nisi vehicula ut. Curabitur fringilla neque sit amet tempus tincidunt. Vestibulum scelerisque nibh ante,
-                            sit amet tincidunt.
-                        </p>
+                    <article class="m-article g-item g-item--col-5">
+                        <div class="m-article__content">
+                            <header>
+                                <p class="m-article__date"><time datetime="2015-10-14T16:31:24+02:00">14 / 10 / 2015</time></p>
+                                <h2 class="m-article__title"><a class="a-link a-link--primary" href="#" title="Sprzęt piwowara domowego">Sprzęt piwowara domowego</a></h2>
+                            </header>
+                            <p class="m-article__description">Fusce velit nisi, dignissim tincidunt odio condimentum, gravida ullamcorper ligula. Aliquam varius urna arcu, auctor mollis nisi vehicula ut. Curabitur fringilla neque sit amet tempus tincidunt. Vestibulum scelerisque nibh
+                                ante, sit amet tincidunt.
+                            </p>
+                        </div>
                     </article>
 
                 </div>
@@ -135,7 +139,7 @@
 
             <section>
 
-                <h1>Receptury</h1>
+                <h1 class="a-header a-header--secondary">Receptury</h1>
 
                 <nav class="m-filter" id="beer-tabs">
                     <ul class="m-filter__list">
@@ -143,7 +147,7 @@
                         <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-2" title="Zacieranie">Zacieranie</a></li>
                         <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-3" title="Fermentacja">Fermentacja</a></li>
                         <li class="m-filter__item"><a class="a-btn a-btn--secondary a-btn--sm" href="#beer-tabs-4" title="Brzeczka nastawna w litrach">Brzeczka nastawna w litrach</a></li>
-                        <li class="m-filter__item"><input type="search" placeholder="Szukaj.."></li>
+                        <li class="m-filter__item"><input class="a-input a-input--primary" type="search" placeholder="Szukaj.."></li>
                     </ul>
 
                     <div class="m-filter__options m-filter__options--is-active g-container" id="beer-tabs-1">
@@ -216,15 +220,24 @@
                 </nav>
 
                 <div class="g-container g-container--stretch">
-                    <article class="g-item g-item--col-3">
+                    <article class="m-item g-item g-item--col-3">
                         <a href="#" title="Jasne Lekko Wędzone">
                             <img src="img/recipes/jasne-lekko-wedzone.jpg" width="100%" alt="Jasne Lekko Wędzone">
                         </a>
                         <header>
-                            <p><time datetime="2016-08-11T16:31:24+02:00">11 / 08 / 2016</time></p>
-                            <h2><a href="#" title="Jasne Lekko Wędzone">Jasne Lekko Wędzone</a></h2>
+                            <p class="m-item__date"><time datetime="2016-08-11T16:31:24+02:00">11 / 08 / 2016</time></p>
+                            <h2 class="m-item__title"><a class="a-link a-link--primary" href="#" title="Jasne Lekko Wędzone">Jasne Lekko Wędzone</a></h2>
                         </header>
-                        <p>Piwo wykonane według tej receptury zajęło I miejsce w konkursie Slovak Hombrewing Star 2010 w kategorii piw jasnych warzonych ze słodów o ekstrakcie poniżej 14Blg.</p>
+                        <div class="m-item__overlay">
+                            <a href="#" title="Jasne Lekko Wędzone">
+                                <img src="img/recipes/jasne-lekko-wedzone.jpg" width="100%" alt="Jasne Lekko Wędzone">
+                            </a>
+                            <header>
+                              <p class="m-item__date"><time datetime="2016-08-11T16:31:24+02:00">11 / 08 / 2016</time></p>
+                              <h2 class="m-item__title"><a class="a-link a-link--primary" href="#" title="Jasne Lekko Wędzone">Jasne Lekko Wędzone</a></h2>
+                            </header>
+                            <p class="m-item__description">Piwo wykonane według tej receptury zajęło I miejsce w konkursie Slovak Hombrewing Star 2010 w kategorii piw jasnych warzonych ze słodów o ekstrakcie poniżej 14Blg.</p>
+                        </div>
                     </article>
 
                     <article class="g-item g-item--col-3">
@@ -311,7 +324,7 @@
 
             <section>
 
-                <h1>Kontakt</h1>
+                <h1 class="a-header a-header--secondary">Kontakt</h1>
 
                 <p>
                     <strong>Andrzej Kowalski</strong><br><br> 48-500 Stare Juchy<br> ul. Starego Piwosza 15<br><br> tel. 349 473 962

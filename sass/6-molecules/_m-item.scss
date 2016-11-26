@@ -1,0 +1,98 @@
+@import './1-tools/variables';
+
+/* _____ ARTICLE _____ */
+
+// Component variables
+$m-item-background: #fff;
+$m-item-border-color: $border-secondary;
+$m-item-padding: 1.6rem;
+
+$m-item__overlay-box-shadow: $box-shadow-hover;
+$m-item__overlay-background: #fff;
+$m-item__overlay-border-color: $border-hover;
+$m-item__overlay-padding: 1.5rem;
+$m-item__overlay-transition: $transition-default;
+
+$m-item__date-text-color: rgba($color-gray-dark-tertiary, 0.87);
+$m-item__date-margin: 0 0 .55rem;
+$m-item__date-font-family: $font-open-sans;
+$m-item__date-font-size: 1.4rem;
+$m-item__date-font-weight: 600;
+
+$m-item__title-text-color: #000;
+$m-item__title-margin: 0 0 1.5rem;
+$m-item__title-line-height: 2.7rem;
+$m-item__title-font-family: $font-open-sans;
+$m-item__title-font-size: 2.1rem;
+$m-item__title-font-weight: 400;
+
+$m-item__description-text-color: $text-primary;
+$m-item__description-margin: 0;
+$m-item__description-line-height: 2.3rem;
+$m-item__description-font-family: $font-open-sans;
+$m-item__description-font-size: 1.5rem;
+$m-item__description-font-weight: 400;
+
+.m-item {
+    background: $m-item-background;
+    border    : .1rem solid $m-item-border-color;
+    padding   : $m-item-padding;
+    position  : relative;
+
+    &__overlay {
+        box-shadow: $m-item__overlay-box-shadow;
+        background: $m-item__overlay-background;
+        border    : .1rem solid $m-item__overlay-border-color;
+        padding   : $m-item__overlay-padding;
+        transition: $m-item__overlay-transition;
+        opacity   : 0;
+        visibility: hidden;
+        position  : absolute;
+        left      : 0;
+        top       : 0;
+        right     : 0;
+    }
+
+    &__date {
+        color : $m-item__date-text-color;
+        margin: $m-item__date-margin;
+        font  : {
+            family: $m-item__date-font-family;
+            size  : $m-item__date-font-size;
+            weight: $m-item__date-font-weight;
+        }
+    }
+
+    &__title {
+        color      : $m-item__title-text-color;
+        margin     : $m-item__title-margin;
+        line-height: $m-item__title-line-height;
+        font       : {
+            family: $m-item__title-font-family;
+            size  : $m-item__title-font-size;
+            weight: $m-item__title-font-weight;
+        }
+    }
+
+    &__description {
+        color      : $m-item__description-text-color;
+        margin     : $m-item__description-margin;
+        line-height: $m-item__description-line-height;
+        font       : {
+            family: $m-item__description-font-family;
+            size  : $m-item__description-font-size;
+            weight: $m-item__description-font-weight;
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        z-index: 500;
+
+        .m-item__overlay {
+            opacity   : 1;
+            visibility: visible;
+        }
+    }
+}

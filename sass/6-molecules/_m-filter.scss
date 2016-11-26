@@ -3,6 +3,8 @@
 /* _____ FILTER _____ */
 
 // Component variables
+$m-filter-margin: 0 0 5rem;
+
 $m-filter__options-padding: 3rem;
 $m-filter__options-border-color: $color-blue-tertiary;
 $m-filter__options-background: #fff;
@@ -14,6 +16,8 @@ $m-filter__options-group-background: #fff;
 $m-filter__checkbox-item-margin: 1rem 0 0;
 
 .m-filter {
+    margin: $m-filter-margin;
+
     &__list {
         list-style-type: none;
         @include flex-container(center, flex-start, row, wrap);
