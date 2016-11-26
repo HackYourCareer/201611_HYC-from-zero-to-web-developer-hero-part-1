@@ -4,14 +4,19 @@ $(document).ready(function() {
         let filterObject = composeFilterObject(allCheckedOptions);
 
         if (filterObject) {
-            beerStorage.getFilteredBeers(filterObject, function(){});
+            beerStorage.getFilteredBeers(filterObject, appendBeerDivs);
         }
         else {
-            beerStorage.getAllBeers(function() {});
+            beerStorage.getAllBeers(appendBeerDivs);
         }
     });
 
+    let beerTemplate = undefined;
+    grabBeerTemplate();
+
     $('#beer-tabs').tabs();
+
+    beerStorage.getAllBeers(appendBeerDivs);
 });
 
 function getAllCheckedOptions() {
@@ -34,12 +39,26 @@ function composeFilterObject(checkedOptions) {
             filterObject[option].$in.push(value);
         }
         else {
-            filterObject[option] = {$in: [value]};
+            filterObject[option] = { $in: [value] };
         }
     });
     return filterObject;
 }
 
-function appendBeerDivs() {
+function appendBeerDivs(serverResponse) {
+    $('#beers-div').html('');
+    serverResponse.forEach(function(beerData) {
+        let beerHtml = beerTemplate(beerData);
+        $('#beers-div').append(beerHtml);
+    });
+}
 
+function grabBeerTemplate(beersData) {
+    $.ajax({
+        url: '../templates/beer-template.hbs',
+        cache: true
+    })
+    .done(function(source) {
+         beerTemplate = Handlebars.compile($(source).html());
+    });
 }
