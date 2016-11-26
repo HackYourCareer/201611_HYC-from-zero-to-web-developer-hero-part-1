@@ -24,6 +24,14 @@ $g-item-margin-bottom: 2rem;
         @include justify-content(space-between);
     }
 
+    &--stretch {
+        @include align-items(stretch);
+    }
+
+    &--align-flex-start {
+        @include align-items(flex-start);
+    }
+
     &--nowrap {
         @include flex-wrap(nowrap);
     }
@@ -32,9 +40,6 @@ $g-item-margin-bottom: 2rem;
         @include flex-direction(column);
     }
 
-    &--stretch {
-        @include align-items(stretch);
-    }
 }
 
 .g-item {

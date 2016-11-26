@@ -10,15 +10,32 @@ $a-header--primary-font-size: 3rem;
 $a-header--primary-font-weight: 500;
 $a-header--primary-margin: 0 0 2.5rem;
 
+$a-header--secondary-text-color: $header-secondary;
+$a-header--secondary-line-height: 140%;
+$a-header--secondary-font-size: 3.6rem;
+$a-header--secondary-font-weight: 400;
+$a-header--secondary-margin: 2.5rem 0 2.5rem;
+$a-header--secondary-padding: 2.5rem 0 0;
+
 .a-header {
-  &--primary {
-    color         : $a-header--primary-text-color;
-    line-height   : $a-header--primary-line-height;
-    letter-spacing: $a-header--primary-letter-spacing;
-    margin        : $a-header--primary-margin;
-    font          : {
-      size  : $a-header--primary-font-size;
-      weight: $a-header--primary-font-weight;
+    &--primary {
+        color      : $a-header--primary-text-color;
+        line-height: $a-header--primary-line-height;
+        margin     : $a-header--primary-margin;
+        font       : {
+            size  : $a-header--primary-font-size;
+            weight: $a-header--primary-font-weight;
+        }
     }
-  }
+
+    &--secondary {
+        color      : $a-header--secondary-text-color;
+        line-height: $a-header--secondary-line-height;
+        margin     : $a-header--secondary-margin;
+        display    : block;
+        font       : {
+            size  : $a-header--secondary-font-size;
+            weight: $a-header--secondary-font-weight;
+        }
+    }
 }

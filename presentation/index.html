@@ -188,7 +188,203 @@
         </section>
         <section id="css" data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
-            <h2>CSS</h2>
+            <h2>CSS <br>Cascading Style Sheets</h2>
+          </section>
+          <section>
+            <h2>No właśnie, <br>co to takiego <strong>CSS</strong>?</h2>
+            <ul>
+              <li class="fragment">język służący do formatowania wyglądu elementów HTML, które tworzą wygląd strony internetowej</li>
+              <li class="fragment">skrót CSS oznacza "Kaskadowy Arkusz Stylów"</li>
+              <li class="fragment">jest to plik z rozszerzeniem ".css, w którym znajdują się pewne reguły CSS</li>
+            </ul>
+          </section>
+          <section>
+            <h2>No właśnie, <br>co to takiego <strong>CSS</strong>?</h2>
+            <ul>
+              <li class="fragment">został stworzony w celu odseparowania struktury dokumentu od formy jego prezentacji</li>
+              <li class="fragment">separacja
+                <ul>
+                  <li class="fragment">zwiększa zakres dostępności witryny, </li>
+                  <li class="fragment">zmniejsza zawiłość dokumentu, </li>
+                  <li class="fragment">ułatwia wprowadzanie zmian w strukturze dokumentu</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>CSS selectors</h2>
+            <pre class="fragment">
+              <code>
+    /* class */
+
+    .myCssClass {
+      color: blue;
+    }
+            </code>
+            <code class="fragment">
+    /* ID */
+
+    #myCssID {
+      text-align: center;
+    }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>CSS selectors</h2>
+            <pre class="fragment">
+              <code>
+    /* element */
+
+    h1 {
+      font-size: 34px;
+    }
+           </code>
+            <code class="fragment">
+    /* combining selectors */
+    #myCssID .myCssClass p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* layering selectors */
+    .parentCssClass .childCssClass .testCssClass {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Pseudo selectors</h2>
+            <pre class="fragment">
+              <code>
+    /* mouse over link */
+    a:hover {
+        color: #FF00FF;
+    }
+
+    /* selected link */
+    a:active {
+        color: #0000FF;
+    }
+
+    /* focused element */
+    button:focus {
+        border: 1px solid #FF0000;
+    }
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Common CSS property values</h2>
+            <ul class="fragment">
+              <li>Units</li>
+              <li>Colors</li>
+            </ul>
+          </section>
+          <section>
+            <h2>CSS Units</h2>
+            <ul>
+              <li class="fragment">Many CSS properties take "length" values, such as width, margin, padding, font-size, border-width, etc.</li>
+              <li class="fragment">Length is a number followed by a length unit, such as 10px, 2em, etc.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Absolute Lengths Units</h2>
+            <ul>
+              <li class="fragment">fixed and a length expressed in any of these will appear as exactly that size</li>
+              <li class="fragment">not recommended for use on screen, because screen sizes vary so much</li>
+              <li class="fragment">they can be used if the output medium is known, such as for print layout</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Absolute Lengths Units</h2>
+            <ul class="fragment">
+              <li>px - pixels (1px = 1/96th of 1in)</li>
+              <li>cm - centimeters</li>
+              <li>mm - millimeters</li>
+              <li>in - inches (1in = 96px = 2.54cm)</li>
+              <li>pt - points (1pt = 1/72 of 1in)</li>
+              <li>pc - picas (1pc = 12 pt)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Relative Lengths Units</h2>
+            <ul>
+              <li class="fragment">specify a length relative to another length property</li>
+              <li class="fragment">scales better between different rendering mediums</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Relative Lengths Units</h2>
+            <ul class="fragment">
+              <li>% -percents</li>
+              <li>em - relative to the font-size of the element</li>
+              <li>ex - relative to the x-height of the current font</li>
+              <li>ch - relative to width of the "0" (zero)</li>
+              <li>rem - relative to font-size of the root element</li>
+              <li>vw/vh - relative to 1% of the width/height of the viewport</li>
+              <li>vmin/vmax - relative to 1% of viewport's smaller/larger dimension</li>
+            </ul>
+          </section>
+          <section>
+            <h2>CSS Colors</h2>
+            <ul>
+              <li class="fragment">Colors in CSS can be specified by the following methods:</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Hexadecimal colors</h2>
+            <pre class="fragment">
+              <code>
+      /* HEX */
+      #p1 {background-color: #ff0000;} /* red */
+      #p2 {background-color: #00ff00;} /* green */
+      #p3 {background-color: #0000ff;} /* blue */
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>RGB/RGBA colors</h2>
+            <pre class="fragment">
+              <code>
+/* RGB */
+#p1 {background-color: rgb(255, 0, 0);} /* red */
+#p2 {background-color: rgb(0, 255, 0);} /* green */
+#p3 {background-color: rgb(0, 0, 255);} /* blue */
+
+/* RGBA (opacity) */
+#p1 {background-color: rgba(255, 0, 0, 0.3);} /* red with opacity */
+#p2 {background-color: rgba(0, 255, 0, 0.3);} /* green with opacity */
+#p3 {background-color: rgba(0, 0, 255, 0.3);} /* blue with opacity */
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>HSL/HSLA colors</h2>
+            <pre class="fragment">
+              <code>
+/* HSL */
+#p1 {background-color: hsl(120, 100%, 50%);} /* green */
+#p2 {background-color: hsl(120, 100%, 75%);} /* light green */
+#p3 {background-color: hsl(120, 100%, 25%);} /* dark green */
+#p4 {background-color: hsl(120, 60%, 70%);}  /* pastel green */
+
+/* HSLA (opacity) */
+#p1 {background-color: hsla(120, 100%, 50%, 0.3);} /* green with opacity */
+#p2 {background-color: hsla(120, 100%, 75%, 0.3);} /* light green with opacity */
+#p3 {background-color: hsla(120, 100%, 25%, 0.3);} /* dark green with opacity */
+#p4 {background-color: hsla(120, 60%, 70%, 0.3);}  /* pastel green with opacity */
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Predefined Cross-browser color names</h2>
+            <img class="fragment" src="lib/css-colors.png">
+          </section>
+          <section>
+            <h2>CSS Box model</h2>
+            <img class="fragment" src="lib/box-model.png">
           </section>
         </section>
         <section id="javascript" data-background-image="lib/repeatable_pattern_background.jpg">

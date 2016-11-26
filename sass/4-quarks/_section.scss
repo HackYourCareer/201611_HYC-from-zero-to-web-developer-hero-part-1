@@ -2,4 +2,17 @@
 
 /* _____ SECTION _____ */
 
-section {}
+// Component variables
+$section-border-color: $border-primary;
+$section-margin: 5rem 0 0;
+
+section {
+  width     : 100%;
+  border-top: .1rem solid $section-border-color;
+  margin    : $section-margin;
+
+  &:first-child {
+    margin: 0;
+    border: none;
+  }
+}
