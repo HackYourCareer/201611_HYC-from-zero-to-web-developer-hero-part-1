@@ -1,0 +1,32 @@
+<script id="beer-template" type="text/x-handlebars-template">
+    <article class="m-item g-item g-item--col-3">
+        <a href="#" title="{{nazwa}}">
+            <img src="img/recipes/{{img}}" width="100%" alt="{{nazwa}}">
+        </a>
+        <header>
+            <p class="m-item__date">
+                <time datetime="2016-08-11T16:31:24+02:00">11 / 08 / 2016</time>
+            </p>
+            <h2 class="m-item__title"><a class="a-link a-link--primary" href="#" title="{{nazwa}}">{{nazwa}}</a></h2>
+        </header>
+        <div class="m-item__overlay">
+            <a href="#" title="{{img}}">
+                <img src="img/recipes/{{img}}" width="100%" alt="{{nazwa}}">
+            </a>
+            <header>
+                <p class="m-item__date">
+                    <time datetime="2016-08-11T16:31:24+02:00">11 / 08 / 2016</time>
+                </p>
+                <h2 class="m-item__title"><a class="a-link a-link--primary" href="#" title="{{nazwa}}">{{nazwa}}</a></h2>
+            </header>
+            <p class="m-item__description">{{opis}}</p>
+            <p><strong>Informacje o recepturze:</strong></p>
+            <ul>
+                <li>Zacieranie: {{zacieranie}}</li>
+                <li>Fermentacja: {{fermentacja}}</li>
+                <li>Zawartość ekstraktu (Blg): {{ekstrakt}}</li>
+                <li>Brzeczka nastawna w litrach: {{brzeczka}}</li>
+            </ul>
+        </div>
+    </article>
+</script>
