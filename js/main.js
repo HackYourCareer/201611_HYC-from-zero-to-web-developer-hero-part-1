@@ -4,12 +4,14 @@ $(document).ready(function() {
         let filterObject = composeFilterObject(allCheckedOptions);
 
         if (filterObject) {
-            beerStorage.getFilteredBeers(filterObject, function(){});
-        }
-        else {
-            beerStorage.getAllBeers(function() {});
+            beerStorage.getFilteredBeers(filterObject, appendBeerDivs);
+        } else {
+            beerStorage.getAllBeers(appendBeerDivs);
         }
     });
+
+    let beerTemplate = undefined;
+    grabBeerTemplate();
 
     $('#beer-tabs').tabs();
 
@@ -20,6 +22,8 @@ $(document).ready(function() {
         $allButtons.removeClass('a-btn--is-active');
         $this.addClass('a-btn--is-active');
     });
+
+    beerStorage.getAllBeers(appendBeerDivs);
 });
 
 function getAllCheckedOptions() {
@@ -40,14 +44,29 @@ function composeFilterObject(checkedOptions) {
         if (!isNaN(value)) value = +value;
         if (filterObject[option]) {
             filterObject[option].$in.push(value);
-        }
-        else {
-            filterObject[option] = {$in: [value]};
+        } else {
+            filterObject[option] = {
+                $in: [value]
+            };
         }
     });
     return filterObject;
 }
 
-function appendBeerDivs() {
+function appendBeerDivs(serverResponse) {
+    $('#beers-div').html('');
+    serverResponse.forEach(function(beerData) {
+        let beerHtml = beerTemplate(beerData);
+        $('#beers-div').append(beerHtml);
+    });
+}
 
+function grabBeerTemplate(beersData) {
+    $.ajax({
+            url: '../templates/beer-template.hbs',
+            cache: true
+        })
+        .done(function(source) {
+            beerTemplate = Handlebars.compile($(source).html());
+        });
 }
