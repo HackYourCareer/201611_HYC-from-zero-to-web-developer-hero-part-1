@@ -199,7 +199,6 @@
             </ul>
           </section>
           <section>
-            <h2>No właśnie, <br>co to takiego <strong>CSS</strong>?</h2>
             <ul>
               <li class="fragment">został stworzony w celu odseparowania struktury dokumentu od formy jego prezentacji</li>
               <li class="fragment">separacja
@@ -295,17 +294,7 @@
               <li class="fragment">fixed and a length expressed in any of these will appear as exactly that size</li>
               <li class="fragment">not recommended for use on screen, because screen sizes vary so much</li>
               <li class="fragment">they can be used if the output medium is known, such as for print layout</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Absolute Lengths Units</h2>
-            <ul class="fragment">
-              <li>px - pixels (1px = 1/96th of 1in)</li>
-              <li>cm - centimeters</li>
-              <li>mm - millimeters</li>
-              <li>in - inches (1in = 96px = 2.54cm)</li>
-              <li>pt - points (1pt = 1/72 of 1in)</li>
-              <li>pc - picas (1pc = 12 pt)</li>
+              <li class="fragment">px, cm, mm, in, pt, pc</li>
             </ul>
           </section>
           <section>
@@ -313,18 +302,7 @@
             <ul>
               <li class="fragment">specify a length relative to another length property</li>
               <li class="fragment">scales better between different rendering mediums</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Relative Lengths Units</h2>
-            <ul class="fragment">
-              <li>% -percents</li>
-              <li>em - relative to the font-size of the element</li>
-              <li>ex - relative to the x-height of the current font</li>
-              <li>ch - relative to width of the "0" (zero)</li>
-              <li>rem - relative to font-size of the root element</li>
-              <li>vw/vh - relative to 1% of the width/height of the viewport</li>
-              <li>vmin/vmax - relative to 1% of viewport's smaller/larger dimension</li>
+              <li class="fragment">%, em, ex, ch, rem, vm/vh, vmin/vmax</li>
             </ul>
           </section>
           <section>
@@ -334,47 +312,25 @@
             </ul>
           </section>
           <section>
-            <h2>Hexadecimal colors</h2>
             <pre class="fragment">
               <code>
-      /* HEX */
-      #p1 {background-color: #ff0000;} /* red */
-      #p2 {background-color: #00ff00;} /* green */
-      #p3 {background-color: #0000ff;} /* blue */
+      /* Hexadecimal colors */
+      #p1 {background-color: #ff0000;}
+
+      /* RGB colors */
+      #p1 {background-color: rgb(255, 0, 0);}
+
+      /* RGBA colors with opacity */
+      #p1 {background-color: rgba(255, 0, 0, 0.3);}
               </code>
             </pre>
-          </section>
-          <section>
-            <h2>RGB/RGBA colors</h2>
             <pre class="fragment">
               <code>
-/* RGB */
-#p1 {background-color: rgb(255, 0, 0);} /* red */
-#p2 {background-color: rgb(0, 255, 0);} /* green */
-#p3 {background-color: rgb(0, 0, 255);} /* blue */
+      /* HSL colors */
+      #p1 {background-color: hsl(120, 100%, 50%);}
 
-/* RGBA (opacity) */
-#p1 {background-color: rgba(255, 0, 0, 0.3);} /* red with opacity */
-#p2 {background-color: rgba(0, 255, 0, 0.3);} /* green with opacity */
-#p3 {background-color: rgba(0, 0, 255, 0.3);} /* blue with opacity */
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>HSL/HSLA colors</h2>
-            <pre class="fragment">
-              <code>
-/* HSL */
-#p1 {background-color: hsl(120, 100%, 50%);} /* green */
-#p2 {background-color: hsl(120, 100%, 75%);} /* light green */
-#p3 {background-color: hsl(120, 100%, 25%);} /* dark green */
-#p4 {background-color: hsl(120, 60%, 70%);}  /* pastel green */
-
-/* HSLA (opacity) */
-#p1 {background-color: hsla(120, 100%, 50%, 0.3);} /* green with opacity */
-#p2 {background-color: hsla(120, 100%, 75%, 0.3);} /* light green with opacity */
-#p3 {background-color: hsla(120, 100%, 25%, 0.3);} /* dark green with opacity */
-#p4 {background-color: hsla(120, 60%, 70%, 0.3);}  /* pastel green with opacity */
+      /* HSLA colors with opacity */
+      #p1 {background-color: hsla(120, 100%, 50%, 0.3);}
               </code>
             </pre>
           </section>
@@ -385,6 +341,15 @@
           <section>
             <h2>CSS Box model</h2>
             <img class="fragment" src="lib/box-model.png">
+          </section>
+          <section>
+            <h2>CSS Resources</h2>
+            <ul>
+              <li class="fragment">online reference: <a href="http://www.w3schools.com/css/">W3Schools CSS</a></li>
+              <li class="fragment">do pokodzenia: <a href="http://codepen.io/">Code Pen</a></li>
+              <li class="fragment">do obejrzenia: <a href="https://css-tricks.com/">CSS Tricks</a></li>
+              <li class="fragment">do poczytania: <a href="http://webkod.pl/kurs-css/lekcje/dzial-1/css-co-to-takiego">Kurs CSS</a></li>
+            </ul>
           </section>
         </section>
         <section id="javascript" data-background-image="lib/repeatable_pattern_background.jpg">
