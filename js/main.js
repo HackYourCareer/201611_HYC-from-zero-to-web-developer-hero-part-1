@@ -12,6 +12,14 @@ $(document).ready(function() {
     });
 
     $('#beer-tabs').tabs();
+
+    $('.m-filter__item .a-btn').click(function() {
+        const $this = $(this);
+        const $allButtons = $('.m-filter__item .a-btn');
+
+        $allButtons.removeClass('a-btn--is-active');
+        $this.addClass('a-btn--is-active');
+    });
 });
 
 function getAllCheckedOptions() {
