@@ -1,4 +1,12 @@
 $(document).ready(function() {
+    //init dynamic content
+    $('#beer-tabs').tabs();
+    let beerTemplate = undefined;
+    grabBeerTemplate(function() {
+        beerStorage.getAllBeers(appendBeerDivs);        
+    });
+
+    //registering event handler
     $('.a-checkbox--primary').click(function() {
         let allCheckedOptions = getAllCheckedOptions();
         let filterObject = composeFilterObject(allCheckedOptions);
@@ -10,15 +18,18 @@ $(document).ready(function() {
             beerStorage.getAllBeers(appendBeerDivs);
         }
     });
-
-    let beerTemplate = undefined;
-    grabBeerTemplate();
-
-    $('#beer-tabs').tabs();
-
-    beerStorage.getAllBeers(appendBeerDivs);
 });
 
+//manpiulates the html adding beers coming from server
+function appendBeerDivs(serverResponse) {
+    $('#beers-div').html('');
+    serverResponse.forEach(function(beerData) {
+        let beerHtml = beerTemplate(beerData);
+        $('#beers-div').append(beerHtml);
+    });
+}
+
+//no need to deep-dive into these functions
 function getAllCheckedOptions() {
     let allCheckboxes = $('#beer-tabs').find('.a-checkbox--primary');
     let checked = [];
@@ -45,20 +56,13 @@ function composeFilterObject(checkedOptions) {
     return filterObject;
 }
 
-function appendBeerDivs(serverResponse) {
-    $('#beers-div').html('');
-    serverResponse.forEach(function(beerData) {
-        let beerHtml = beerTemplate(beerData);
-        $('#beers-div').append(beerHtml);
-    });
-}
-
-function grabBeerTemplate(beersData) {
+function grabBeerTemplate(callback) {
     $.ajax({
         url: '../templates/beer-template.hbs',
         cache: true
     })
     .done(function(source) {
          beerTemplate = Handlebars.compile($(source).html());
+         callback();
     });
 }
