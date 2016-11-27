@@ -13,6 +13,10 @@ $(document).ready(function() {
         }
         return false;
     });
+
+    $('#cf-email, #cf-content').click(function() {
+        removeSubmissionInfo();
+    });
 });
 
 function validateEmail(email) {
@@ -22,11 +26,17 @@ function validateEmail(email) {
 }
 
 function addConfirmationMessage() {
-
+    const confirmMsg = 'Twoja wiadomość poleciała do Andrzeja!'
+    $('#submission-info').text(confirmMsg);
 }
 
 function addErrorMessage() {
-    
+    const errorMsg = 'Podaj prawidłowy adres email!'
+    $('#submission-info').text(errorMsg);
+}
+
+function removeSubmissionInfo() {
+    $('#submission-info').text('');
 }
 
 function sendEmail(email, content, callback) {
