@@ -1,0 +1,13 @@
+@import './1-tools/variables';
+
+/* _____ FORM _____ */
+
+// Component variables
+$m-form__subelement-margin: 0 0 3.8rem;
+
+.m-form {
+    &__subelement {
+        margin: $m-form__subelement-margin;
+        border: none;
+    }
+}
