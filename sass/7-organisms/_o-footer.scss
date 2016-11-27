@@ -1,0 +1,13 @@
+@import './1-tools/variables';
+
+/* _____ FOOTER _____ */
+
+// Component variables
+$footer-background: $color-gray-light-quaternary;
+$footer-height: 10rem;
+
+.o-footer {
+    background: $footer-background;
+    height    : $footer-height;
+    @include flex-container();
+}

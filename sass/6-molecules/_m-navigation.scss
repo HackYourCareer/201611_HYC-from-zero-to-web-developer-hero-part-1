@@ -2,11 +2,18 @@
 
 /* _____ NAVIGATION _____ */
 
-.m-navigation {
-  &__list {
-    list-style-type: none;
-    @include flex-container(center, center, row, nowrap);
-  }
+// Component variables
+$m-navigation__item--has-margin-left-margin-left: 1.6rem;
 
-  &__item {}
+.m-navigation {
+    &__list {
+        list-style-type: none;
+        @include flex-container(center, center, row, nowrap);
+    }
+
+    &__item {
+        &--has-margin-left {
+            margin-left: $m-navigation__item--has-margin-left-margin-left;
+        }
+    }
 }

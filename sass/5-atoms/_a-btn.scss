@@ -15,10 +15,27 @@ $btn-secondary-border-color: $color-blue-tertiary;
 $btn-secondary-text-color-hover: #fff;
 $btn-secondary-background-color-hover: $color-blue-tertiary;
 
+$btn-tertiary-text-color: $text-secondary;
+$btn-tertiary-background-color: #fff;
+$btn-tertiary-border-color: $color-blue-tertiary;
+$btn-tertiary-text-color-hover: #fff;
+$btn-tertiary-background-color-hover: $color-blue-tertiary;
+
+$btn-quaternary-text-color: $color-blue-dark-secondary;
+$btn-quaternary-background-color: none;
+$btn-quaternary-border-color: $color-blue-dark-secondary;
+$btn-quaternary-text-color-hover: #fff;
+$btn-quaternary-background-color-hover: $color-blue-dark-secondary;
+
 $btn-sm-height: 4rem;
 $btn-sm-padding: 0 1.4rem;
 $btn-sm-font-size: 1.3rem;
 $btn-sm-font-weight: 700;
+
+$btn-md-height: 5rem;
+$btn-md-padding: 0 4rem;
+$btn-md-font-size: 2.4rem;
+$btn-md-font-weight: 400;
 
 $btn-lg-height: 5.5rem;
 $btn-lg-padding: 0 1.8rem;
@@ -29,6 +46,7 @@ $btn-lg-font-weight: 400;
     transition: $transition-default;
     display   : inline-block;
     text-align: center;
+    cursor    : pointer;
 
     &--primary {
         color     : $btn-primary-text-color;
@@ -57,6 +75,40 @@ $btn-lg-font-weight: 400;
         }
     }
 
+    &--tertiary {
+        color     : $btn-tertiary-text-color;
+        background: $btn-tertiary-background-color;
+        border    : .1rem solid $btn-tertiary-border-color;
+
+        &.a-btn--is-active,
+        &:active,
+        &:focus,
+        &:hover {
+            color     : $btn-tertiary-text-color-hover;
+            background: $btn-tertiary-background-color-hover;
+        }
+    }
+
+    &--quaternary {
+        color     : $btn-quaternary-text-color;
+        background: $btn-quaternary-background-color;
+        border    : .1rem solid $btn-quaternary-border-color;
+
+        &.a-btn--is-active,
+        &:active,
+        &:focus,
+        &:hover {
+            color     : $btn-quaternary-text-color-hover;
+            background: $btn-quaternary-background-color-hover;
+        }
+    }
+
+    &--lg,
+    &--md,
+    &--sm {
+        @include flex-container(center, center, row, wrap);
+    }
+
     &--sm {
         height : $btn-sm-height;
         padding: $btn-sm-padding;
@@ -64,7 +116,15 @@ $btn-lg-font-weight: 400;
             size  : $btn-sm-font-size;
             weight: $btn-sm-font-weight;
         }
-        @include flex-container(center, center, row, wrap);
+    }
+
+    &--md {
+        height : $btn-md-height;
+        padding: $btn-md-padding;
+        font   : {
+            size  : $btn-md-font-size;
+            weight: $btn-md-font-weight;
+        }
     }
 
     &--lg {
@@ -74,6 +134,9 @@ $btn-lg-font-weight: 400;
             size  : $btn-lg-font-size;
             weight: $btn-lg-font-weight;
         }
-        @include flex-container(center, center, row, wrap);
+    }
+
+    &--align-right {
+        margin-left: auto;
     }
 }

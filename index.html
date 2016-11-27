@@ -30,16 +30,16 @@
             <nav class="m-navigation">
                 <ul class="m-navigation__list">
                     <li class="m-navigation__item">
-                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#" title="Witaj!">Witaj!</a>
+                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#welcome" title="Witaj!">Witaj!</a>
                     </li>
                     <li class="m-navigation__item">
-                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#" title="Artykuły">Artykuły</a>
+                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#articles" title="Artykuły">Artykuły</a>
                     </li>
                     <li class="m-navigation__item">
-                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#" title="Receptury">Receptury</a>
+                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#recipes" title="Receptury">Receptury</a>
                     </li>
                     <li class="m-navigation__item">
-                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#" title="Kontakt">Kontakt</a>
+                        <a class="m-navigation__link a-btn a-btn--primary a-btn--lg" href="#contact" title="Kontakt">Kontakt</a>
                     </li>
                 </ul>
             </nav>
@@ -48,11 +48,10 @@
 
     <main class="o-content">
         <div class="o-content__container g-container g-container--screen-lg g-container--column">
-            <section class="g-container">
-                <video width="50%" controls class="g-item g-item--col-7">
-                  <source src="videos/welcome.mp4" type="video/mp4">
-                  Twoja przeglądarka nie wspiera tagu video.
-                </video>
+            <section id="welcome" class="g-container">
+                <figure class="g-item g-item--col-7">
+                    <img src="img/headline.jpg">
+                </figure>
                 <article class="g-item g-item--col-7">
                     <h1 class="a-header a-header--primary">Witaj w świecie receptur Andrzeja!</h1>
                     <p class="a-paragraph a-paragraph--primary">
@@ -67,7 +66,7 @@
             <section>
 
                 <div class="g-container g-container--space-between">
-                    <h1 class="a-header a-header--secondary">Artykuły</h1>
+                    <h1 id="articles" class="a-header a-header--secondary">Artykuły</h1>
                     <input class="a-input a-input--primary" type="search" placeholder="Szukaj..">
                 </div>
 
@@ -137,7 +136,7 @@
 
             </section>
 
-            <section>
+            <section id="recipes">
 
                 <h1 class="a-header a-header--secondary">Receptury</h1>
 
@@ -229,7 +228,7 @@
             </section>
 
 
-            <section>
+            <section id="contact">
 
                 <h1 class="a-header a-header--secondary">Kontakt</h1>
 
@@ -248,8 +247,8 @@
                                 <textarea class="a-textarea a-textarea--form" placeholder="Wiadomość" tabindex="2" required id="cf-content"></textarea>
                             </fieldset>
                             <fieldset class="m-form__subelement">
-                                <button class="a-btn a-btn--md a-btn--tertiary" name="submit" type="submit" id="cf-submit" data-submit="...Wysyłam">WYŚLIJ</button>
-                                <p id="submission-info"></p>
+                                <button class="a-btn a-btn--md a-btn--tertiary a-btn--align-right" name="submit" type="submit" id="cf-submit" data-submit="...Wysyłam">WYŚLIJ</button>
+                                <p class="a-notification a-notification--alert" id="submission-info"></p>
                             </fieldset>
                         </form>
                     </div>
@@ -259,13 +258,21 @@
         </div>
     </main>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#" title="Witaj!">Witaj!</a></li>
-                <li><a href="#" title="Artykuły">Artykuły</a></li>
-                <li><a href="#" title="Receptury">Receptury</a></li>
-                <li><a href="#" title="Kontakt">Kontakt</a></li>
+    <footer class="o-footer">
+        <nav class="m-navigation">
+            <ul class="m-navigation__list">
+                <li class="m-navigation__item">
+                  <a class="a-btn a-btn--quaternary a-btn--sm" href="#welcome" title="Witaj!">Witaj!</a>
+                </li>
+                <li class="m-navigation__item m-navigation__item--has-margin-left">
+                  <a class="a-btn a-btn--quaternary a-btn--sm" href="#articles" title="Artykuły">Artykuły</a>
+                </li>
+                <li class="m-navigation__item m-navigation__item--has-margin-left">
+                  <a class="a-btn a-btn--quaternary a-btn--sm" href="#recipes" title="Receptury">Receptury</a>
+                </li>
+                <li class="m-navigation__item m-navigation__item--has-margin-left">
+                  <a class="a-btn a-btn--quaternary a-btn--sm" href="#contact" title="Kontakt">Kontakt</a>
+                </li>
             </ul>
         </nav>
     </footer>
