@@ -11,12 +11,20 @@ $(document).ready(function() {
         let allCheckedOptions = getAllCheckedOptions();
         let filterObject = composeFilterObject(allCheckedOptions);
 
-        if (filterObject) {
+        if (!$.isEmptyObject(filterObject)) {
             beerStorage.getFilteredBeers(filterObject, appendBeerDivs);
-        }
-        else {
+        } else {
             beerStorage.getAllBeers(appendBeerDivs);
         }
+    });
+
+    //active tab colouring
+    $('.m-filter__item .a-btn').click(function() {
+        const $this = $(this);
+        const $allButtons = $('.m-filter__item .a-btn');
+
+        $allButtons.removeClass('a-btn--is-active');
+        $this.addClass('a-btn--is-active');
     });
 });
 
@@ -48,9 +56,10 @@ function composeFilterObject(checkedOptions) {
         if (!isNaN(value)) value = +value;
         if (filterObject[option]) {
             filterObject[option].$in.push(value);
-        }
-        else {
-            filterObject[option] = { $in: [value] };
+        } else {
+            filterObject[option] = {
+                $in: [value]
+            };
         }
     });
     return filterObject;
