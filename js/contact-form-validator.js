@@ -4,12 +4,18 @@ $(document).ready(function() {
         let content = $('#cf-content').val();
 
         let isValidEmail = validateEmail(email);
+        let isContentFilled = content.length > 0; 
 
-        if (isValidEmail) {
+        if (isValidEmail && isContentFilled) {
             sendEmail(email, content, addConfirmationMessage);
         }
         else {
-            addErrorMessage();
+            if (!isValidEmail) {
+                addErrorMessage('Podaj prawidłowy adres email!');
+            }
+            else {
+                addErrorMessage('Hej, wysil się trochę!');
+            }
         }
         return false;
     });
@@ -30,8 +36,7 @@ function addConfirmationMessage() {
     $('#submission-info').text(confirmMsg);
 }
 
-function addErrorMessage() {
-    const errorMsg = 'Podaj prawidłowy adres email!'
+function addErrorMessage(errorMsg) {
     $('#submission-info').text(errorMsg);
 }
 
