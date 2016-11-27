@@ -7,6 +7,7 @@ Source code from ["From zero to Web Developer Hero - part 1"](https://www.facebo
 2. [Install Yarn](https://yarnpkg.com/en/docs/install)
 3. [Install Bower](https://bower.io/#install-bower)
 4. [Install Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+5. [Install deployd](https://github.com/deployd/deployd#install-from-npm)
 
 ## Installation
 ```
@@ -23,4 +24,10 @@ yarn run compile
 ## Sass watch
 ```
 yarn run watch
+```
+
+## Run deployd server
+```
+cd beerStorage
+dpd
 ```

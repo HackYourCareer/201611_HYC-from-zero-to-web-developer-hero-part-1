@@ -1,0 +1,61 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nazwa": {
+			"name": "nazwa",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "nazwa",
+			"order": 0
+		},
+		"opis": {
+			"name": "opis",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "opis",
+			"order": 1
+		},
+		"zacieranie": {
+			"name": "zacieranie",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "zacieranie",
+			"order": 2
+		},
+		"fermentacja": {
+			"name": "fermentacja",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "fermentacja",
+			"order": 3
+		},
+		"ekstrakt": {
+			"name": "ekstrakt",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "ekstrakt",
+			"order": 4
+		},
+		"brzeczka": {
+			"name": "brzeczka",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "brzeczka",
+			"order": 5
+		},
+		"img": {
+			"name": "img",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "img",
+			"order": 6
+		}
+	}
+}
