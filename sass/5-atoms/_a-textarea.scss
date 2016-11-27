@@ -1,0 +1,59 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ TITLE _____ */
+
+// Component variables
+$a-textarea--form-text-color: #fff;
+$a-textarea--form-background-color: $input-secondary;
+$a-textarea--form-line-height: 140%;
+$a-textarea--form-padding: 0 2rem;
+$a-textarea--form-font-size: 2.4rem;
+$a-textarea--form-font-weight: 400;
+
+.a-textarea {
+    &--form {
+        background : $a-textarea--form-background-color;
+        color      : $a-textarea--form-text-color;
+        line-height: $a-textarea--form-line-height;
+        padding    : $a-textarea--form-padding;
+        border     : none;
+        display    : block;
+        width      : 100%;
+        max-width  : 100%;
+        font       : {
+            size  : $a-textarea--form-font-size;
+            weight: $a-textarea--form-font-weight;
+        }
+
+        &::-webkit-input-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &:-moz-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::-ms-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+    }
+}

@@ -13,6 +13,13 @@ $a-input--primary-padding: 0 4.5rem 0 1.5rem;
 $a-input--primary-font-size: 1.4rem;
 $a-input--primary-font-weight: 700;
 
+$a-input--form-text-color: #fff;
+$a-input--form-background-color: $input-secondary;
+$a-input--form-height: 5rem;
+$a-input--form-padding: 0 2rem;
+$a-input--form-font-size: 2.4rem;
+$a-input--form-font-weight: 400;
+
 .a-input {
     &--primary {
         color      : $a-input--primary-text-color;
@@ -26,6 +33,51 @@ $a-input--primary-font-weight: 700;
         font       : {
             size  : $a-input--primary-font-size;
             weight: $a-input--primary-font-weight;
+        }
+    }
+
+    &--form {
+        background : $a-input--form-background-color;
+        color      : $a-input--form-text-color;
+        height     : $a-input--form-height;
+        line-height: $a-input--form-height;
+        padding    : $a-input--form-padding;
+        border     : none;
+        display    : block;
+        width      : 100%;
+        font       : {
+            size  : $a-input--form-font-size;
+            weight: $a-input--form-font-weight;
+        }
+
+        &::-webkit-input-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &:-moz-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::-ms-placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
+        }
+
+        &::placeholder {
+            color  : $a-input--form-text-color;
+            opacity: 1;
         }
     }
 }
