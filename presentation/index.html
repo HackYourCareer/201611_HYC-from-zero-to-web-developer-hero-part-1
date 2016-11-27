@@ -205,44 +205,57 @@
           <section>
             <h2>CSS selektory</h2>
             <pre class="fragment">
-              <code>
+              <div style="position: relative; display: block; height: 170px;">
+                <code>
     /* class */
 
-    .myCssClass {
-      color: blue;
-    }
-            </code>
-            <code class="fragment">
-    /* ID */
-
-    #myCssID {
-      text-align: center;
+    .tower-of-pisa {
+      font-style: italic;
     }
               </code>
+              <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+            </div>
+            <div class="fragment" style="position: relative; display: block; height: 170px;">
+              <code>
+    /* ID */
+
+    #ninja {
+      visibility: hidden;
+      color: black;
+    }
+                </code>
+                <img src="lib/img-css/ninja.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+              </div>
             </pre>
           </section>
           <section>
             <h2>CSS selektory</h2>
             <pre class="fragment">
-              <code>
+              <div style="position: relative; display: block; height: 180px;">
+                <code>
     /* element */
 
-    h1 {
-      font-size: 34px;
+    body {
+      height: 100%;
+      display: flex;
     }
-           </code>
-            <code class="fragment">
+                </code>
+                <img src="lib/img-css/body.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+              </div>
+              <div class="fragment" style="position: relative; display: block; height: 220px;">
+                <code>
     /* combining selectors */
-    #myCssID .myCssClass p {
-      margin: 0;
-      padding: 0;
+    #europe .country div {
+      border: none;
     }
 
     /* layering selectors */
-    .parentCssClass .childCssClass .testCssClass {
-      background-color: rgba(255, 255, 255, 0.5);
+    .ikea .section .furniture {
+      display: table;
     }
-              </code>
+                </code>
+                <img src="lib/img-css/europe.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+              </div>
             </pre>
           </section>
           <section>
@@ -307,7 +320,7 @@
             <pre class="fragment">
               <code>
       /* Hexadecimal colors */
-      #p1 {background-color: #ff0000;}
+      #chucknorris { color: #BADA55; }
 
       /* RGB colors */
       #p1 {background-color: rgb(255, 0, 0);}
@@ -328,11 +341,11 @@
           </section>
           <section>
             <h2>Predefiniowane nazwy kolorów</h2>
-            <img class="fragment" src="lib/css-colors.png">
+            <img class="fragment" src="lib/img-css/css-colors.png">
           </section>
           <section>
             <h2>CSS Box model</h2>
-            <img class="fragment" src="lib/box-model.png">
+            <img class="fragment" src="lib/img-css/box-model.png">
           </section>
           <section>
             <h2>Wprowadzenie do Preprocesorów CSS</h2>
