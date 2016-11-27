@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //init dynamic content
-    $('#beer-tabs').tabs();
+    $('#beer-tabs').tabs(); //jQuery ui plugin
     let beerTemplate = undefined;
     grabBeerTemplate(function() {
         beerStorage.getAllBeers(appendBeerDivs);        
@@ -57,9 +57,7 @@ function composeFilterObject(checkedOptions) {
         if (filterObject[option]) {
             filterObject[option].$in.push(value);
         } else {
-            filterObject[option] = {
-                $in: [value]
-            };
+            filterObject[option] = { $in: [value] };
         }
     });
     return filterObject;
