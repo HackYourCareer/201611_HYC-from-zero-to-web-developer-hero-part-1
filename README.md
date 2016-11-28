@@ -27,6 +27,12 @@ yarn run compile
 yarn run watch
 ```
 
+## (Install and) run http-server
+```
+npm install http-server -g
+http-server
+```
+
 ## Run deployd server
 ```
 cd beerStorage
