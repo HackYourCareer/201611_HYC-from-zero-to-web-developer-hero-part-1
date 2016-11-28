@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"nadawca": {
+			"name": "nadawca",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "nadawca",
+			"order": 0
+		},
+		"tresc": {
+			"name": "tresc",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "tresc",
+			"order": 1
+		}
+	}
+}
