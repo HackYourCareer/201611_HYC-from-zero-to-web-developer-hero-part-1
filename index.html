@@ -234,16 +234,16 @@
                         </p>
                     </div>
                     <div class="g-item g-item--col-10">
-                        <form class="m-form" action="">
+                        <form id="contact-form" class="m-form" action="">
                             <fieldset class="m-form__subelement">
-                                <input class="a-input a-input--form" placeholder="E-mail" tabindex="1">
+                                <input class="a-input a-input--form" placeholder="E-mail" tabindex="1" required id="cf-email">
                             </fieldset>
                             <fieldset class="m-form__subelement">
-                                <textarea class="a-textarea a-textarea--form" placeholder="Wiadomość" tabindex="2"></textarea>
+                                <textarea class="a-textarea a-textarea--form" placeholder="Wiadomość" tabindex="2" required id="cf-content"></textarea>
                             </fieldset>
                             <fieldset class="m-form__subelement">
-                                <button class="a-btn a-btn--md a-btn--tertiary a-btn--align-right" name="submit" type="submit" data-submit="...Wysyłam">WYŚLIJ</button>
-                                <p class="a-notification a-notification--alert"></p>
+                                <button class="a-btn a-btn--md a-btn--tertiary a-btn--align-right" name="submit" type="submit" id="cf-submit" data-submit="...Wysyłam">WYŚLIJ</button>
+                                <p class="a-notification a-notification--alert" id="submission-info"></p>
                             </fieldset>
                         </form>
                     </div>
@@ -272,6 +272,8 @@
         </nav>
     </footer>
 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/contact-form-validator.js"></script>
 
 </body>
 
