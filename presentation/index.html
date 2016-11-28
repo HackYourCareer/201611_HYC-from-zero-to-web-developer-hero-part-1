@@ -229,7 +229,7 @@
               <li class="fragment">separacja
                 <ul>
                   <li class="fragment">zwiększa zakres dostępności witryny, </li>
-                  <li class="fragment">zmniejsza zawiłość dokumentu, </li>
+                  <li class="fragment">zmniejsza kompleksowość dokumentu, </li>
                   <li class="fragment">ułatwia wprowadzanie zmian w strukturze dokumentu</li>
                 </ul>
               </li>
@@ -314,70 +314,29 @@
           </section>
           <section>
             <h2>Najczęściej spotykane właściwości CSS</h2>
-            <ul class="fragment">
-              <li>jednostki</li>
-              <li>kolory</li>
-            </ul>
-          </section>
-          <section>
-            <h2>CSS jednostki</h2>
             <ul>
-              <li class="fragment">Many CSS properties take "length" values, such as width, margin, padding, font-size, border-width, etc.</li>
-              <li class="fragment">Length is a number followed by a length unit, such as 10px, 2em, etc.</li>
+              <li class="fragment">jednostki</li>
+              <ul>
+                <li class="fragment">Jednostki absolutne<br>
+                  <ul>
+                    <li>px, cm, mm, in, pt, pc</li>
+                  </ul>
+                </li>
+                <li class="fragment">Jednostki relatywne<br>
+                  <ul>
+                    <li>%, em, ex, ch, rem, vm/vh, vmin/vmax</li>
+                  </ul>
+                </li>
+              </ul>
+              <li class="fragment">kolory<br>
+                <ul>
+                  <li>Hexadecimal</li>
+                  <li>RGB / RGBA</li>
+                  <li>HSL / HSLA</li>
+                  <li>Predefiniowane nazwy kolorów</li>
+                </ul>
+              </li>
             </ul>
-          </section>
-          <section>
-            <h2>Jednostki absolutne</h2>
-            <ul>
-              <li class="fragment">fixed - length expressed in any of these will appear as exactly that size</li>
-              <li class="fragment">not recommended for use on screen, because screen sizes vary so much</li>
-              <li class="fragment">px, cm, mm, in, pt, pc</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Jednostki relatywne</h2>
-            <ul>
-              <li class="fragment">specify a length relative to another length property</li>
-              <li class="fragment">scales better between different rendering mediums</li>
-              <li class="fragment">%, em, ex, ch, rem, vm/vh, vmin/vmax</li>
-            </ul>
-          </section>
-          <section>
-            <h2>CSS kolory</h2>
-            <ul>
-              <li class="fragment">kolory w CSS można określić za pomocą następujących metod:</li>
-            </ul>
-          </section>
-          <section>
-            <pre class="fragment">
-              <code>
-      /* Hexadecimal colors */
-      #chucknorris { color: #BADA55; }
-
-      /* RGB colors */
-      #p1 {background-color: rgb(255, 0, 0);}
-
-      /* RGBA colors with opacity */
-      #p1 {background-color: rgba(255, 0, 0, 0.3);}
-              </code>
-            </pre>
-            <pre class="fragment">
-              <code>
-      /* HSL colors */
-      #p1 {background-color: hsl(120, 100%, 50%);}
-
-      /* HSLA colors with opacity */
-      #p1 {background-color: hsla(120, 100%, 50%, 0.3);}
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Predefiniowane nazwy kolorów</h2>
-            <img class="fragment" src="lib/img-css/css-colors.png">
-          </section>
-          <section>
-            <h2>CSS Box model</h2>
-            <img class="fragment" src="lib/img-css/box-model.png">
           </section>
           <section>
             <h2>Wprowadzenie do Preprocesorów CSS</h2>
@@ -407,6 +366,9 @@
               <li class="fragment">następnie piszemy w nim kod CSS, używając dodatkowych możliwości oferowanych przez wybraną implementację</li>
               <li class="fragment">oprócz tego możemy posłużyć się wieloma dodatkowymi poleceniami, które już w „czystym” CSS nie były by poprawne</li>
             </ul>
+          </section>
+          <section>
+            <h2>Live coding</h2>
           </section>
           <section>
             <h2>Linki do materiałów</h2>
@@ -485,7 +447,8 @@
       console.log(zmienna);
     }
 
-    let f = jestemFunkcja; // ???
+    jestemFunkcja();       // 42
+    let f = jestemFunkcja;
     f();                   // 42
 
     let tablica = [zmienna, 'Tez jestem stringiem', f];
@@ -506,6 +469,22 @@
     }
 
     piwo.wypij(); //piję: Porter Bałtycki
+              </code></pre>
+          </section>
+          <section>
+              <h2>składnia</h2>
+              <pre><code>
+    let piwo = {
+      wypij: function() {
+        console.log('Sączę Portera Bałtyckiego');
+      }
+    }
+
+    setTimeout(piwo.wypij, 5000); //odpali się po 5 sekundach
+
+    setTimeout(function() {
+      console.log('Sączę Portera Bałtyckiego');
+    }, 5000);
               </code></pre>
           </section>
           <section>
