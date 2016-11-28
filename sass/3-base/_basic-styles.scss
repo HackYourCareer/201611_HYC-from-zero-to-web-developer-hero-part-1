@@ -40,3 +40,14 @@ body {
     background: $color-blue-primary;
     color     : #fff;
 }
+
+$target-height: 11rem;
+
+:target:before {
+    content: '';
+    display: block;
+    height : $target-height;
+    /* fixed header height*/
+    margin : -$target-height 0 0;
+    /* negative fixed header height */
+}

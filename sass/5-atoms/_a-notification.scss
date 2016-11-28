@@ -1,0 +1,28 @@
+@import './1-tools/variables';
+
+/* _____ PARAGRAPH _____ */
+
+// Component variables
+$a-notification--alert-text-color: #fff;
+$a-notification--alert-background: $color-red-primary;
+$a-notification--alert-min-height: 5rem;
+$a-notification--alert-line-height: 2.5rem;
+$a-notification--alert-font-size: 1.8rem;
+$a-notification--alert-font-weight: 400;
+$a-notification--alert-padding: 1rem 2rem;
+$a-notification--alert-margin: 3.8rem 0 0;
+
+.a-notification {
+    &--alert {
+        color      : $a-notification--alert-text-color;
+        background : $a-notification--alert-background;
+        min-height : $a-notification--alert-min-height;
+        line-height: $a-notification--alert-line-height;
+        padding    : $a-notification--alert-padding;
+        margin     : $a-notification--alert-margin;
+        font       : {
+            size  : $a-notification--alert-font-size;
+            weight: $a-notification--alert-font-weight;
+        }
+    }
+}

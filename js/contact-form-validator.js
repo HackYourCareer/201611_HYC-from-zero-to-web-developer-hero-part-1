@@ -4,14 +4,24 @@ $(document).ready(function() {
         let content = $('#cf-content').val();
 
         let isValidEmail = validateEmail(email);
+        let isContentFilled = content.length > 0; 
 
-        if (isValidEmail) {
+        if (isValidEmail && isContentFilled) {
             sendEmail(email, content, addConfirmationMessage);
         }
         else {
-            addErrorMessage();
+            if (!isValidEmail) {
+                addErrorMessage('Podaj prawidłowy adres email!');
+            }
+            else {
+                addErrorMessage('Hej, wysil się trochę!');
+            }
         }
         return false;
+    });
+
+    $('#cf-email, #cf-content').click(function() {
+        removeSubmissionInfo();
     });
 });
 
@@ -22,11 +32,16 @@ function validateEmail(email) {
 }
 
 function addConfirmationMessage() {
-
+    const confirmMsg = 'Twoja wiadomość poleciała do Andrzeja!'
+    $('#submission-info').text(confirmMsg);
 }
 
-function addErrorMessage() {
-    
+function addErrorMessage(errorMsg) {
+    $('#submission-info').text(errorMsg);
+}
+
+function removeSubmissionInfo() {
+    $('#submission-info').text('');
 }
 
 function sendEmail(email, content, callback) {
