@@ -32,6 +32,10 @@ $g-item-margin-bottom: 2rem;
         @include align-items(flex-start);
     }
 
+    &--justify-flex-start {
+        @include justify-content(flex-start);
+    }
+
     &--nowrap {
         @include flex-wrap(nowrap);
     }
@@ -47,67 +51,73 @@ $g-item-margin-bottom: 2rem;
 
     &--col-1 {
         $g-item-col-1-base: (60/1100) * 100%;
-        @include flex(1 0 $g-item-col-1-base);
+        @include flex(0 0 $g-item-col-1-base);
     }
 
     &--col-2 {
         $g-item-col-2-base: (140/1100) * 100%;
-        @include flex(1 0 $g-item-col-2-base);
+        @include flex(0 0 $g-item-col-2-base);
     }
 
     &--col-3 {
-        $g-item-col-3-base: (220/1100) * 100%;
-        @include flex(1 0 $g-item-col-3-base);
+        $g-item-col-3-base: 23%;
+        margin-left       : 1%;
+        margin-right      : 1%;
+        @include flex(0 0 $g-item-col-3-base);
+
+        &:first-child {
+            margin-left: 1% !important;
+        }
     }
 
     &--col-4 {
         $g-item-col-4-base: (300/1100) * 100%;
-        @include flex(1 0 $g-item-col-4-base);
+        @include flex(0 0 $g-item-col-4-base);
     }
 
     &--col-5 {
         $g-item-col-5-base: (380/1100) * 100%;
-        @include flex(1 0 $g-item-col-5-base);
+        @include flex(0 0 $g-item-col-5-base);
     }
 
     &--col-6 {
         $g-item-col-6-base: (460/1100) * 100%;
-        @include flex(1 0 $g-item-col-6-base);
+        @include flex(0 0 $g-item-col-6-base);
     }
 
     &--col-7 {
         $g-item-col-7-base: (540/1100) * 100%;
-        @include flex(1 0 $g-item-col-7-base);
+        @include flex(0 0 $g-item-col-7-base);
     }
 
     &--col-8 {
         $g-item-col-8-base: (620/1100) * 100%;
-        @include flex(1 0 $g-item-col-8-base);
+        @include flex(0 0 $g-item-col-8-base);
     }
 
     &--col-9 {
         $g-item-col-9-base: (700/1100) * 100%;
-        @include flex(1 0 $g-item-col-9-base);
+        @include flex(0 0 $g-item-col-9-base);
     }
 
     &--col-10 {
         $g-item-col-10-base: (780/1100) * 100%;
-        @include flex(1 0 $g-item-col-10-base);
+        @include flex(0 0 $g-item-col-10-base);
     }
 
     &--col-11 {
         $g-item-col-11-base: (860/1100) * 100%;
-        @include flex(1 0 $g-item-col-11-base);
+        @include flex(0 0 $g-item-col-11-base);
     }
 
     &--col-12 {
         $g-item-col-12-base: (940/1100) * 100%;
-        @include flex(1 0 $g-item-col-12-base);
+        @include flex(0 0 $g-item-col-12-base);
     }
 
     &--col-13 {
         $g-item-col-13-base: (1020/1100) * 100%;
-        @include flex(1 0 $g-item-col-13-base);
+        @include flex(0 0 $g-item-col-13-base);
     }
 
     &--col-14 {

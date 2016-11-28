@@ -28,11 +28,22 @@ $m-item__title-font-size: 3rem;
 $m-item__title-font-weight: 600;
 
 $m-item__description-text-color: $text-primary;
-$m-item__description-margin: 0;
+$m-item__description-margin: 0 0 1.5rem;
 $m-item__description-line-height: 1.7rem;
 $m-item__description-font-family: $font-open-sans;
 $m-item__description-font-size: 1.4rem;
 $m-item__description-font-weight: 400;
+
+$m-item__list-margin: 0;
+$m-item__list-padding: 0 0 0 3rem;
+
+$m-item__list-item-text-color: $text-primary;
+$m-item__list-item-margin: .5rem 0 0;
+$m-item__list-item-padding: 0;
+$m-item__list-item-line-height: 1.7rem;
+$m-item__list-item-font-family: $font-open-sans;
+$m-item__list-item-font-size: 1.4rem;
+$m-item__list-item-font-weight: 400;
 
 .m-item {
     background   : $m-item-background;
@@ -84,6 +95,27 @@ $m-item__description-font-weight: 400;
             family: $m-item__description-font-family;
             size  : $m-item__description-font-size;
             weight: $m-item__description-font-weight;
+        }
+    }
+
+    &__list {
+        margin : $m-item__list-margin;
+        padding: $m-item__list-padding;
+
+        &-item {
+            color      : $m-item__list-item-text-color;
+            margin     : $m-item__list-item-margin;
+            line-height: $m-item__list-item-line-height;
+            padding    : $m-item__list-item-padding;
+            font       : {
+                family: $m-item__list-item-font-family;
+                size  : $m-item__list-item-font-size;
+                weight: $m-item__list-item-font-weight;
+            }
+
+            &:first-child {
+                margin: 0;
+            }
         }
     }
 
