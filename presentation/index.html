@@ -485,7 +485,8 @@
       console.log(zmienna);
     }
 
-    let f = jestemFunkcja; // ???
+    jestemFunkcja();       // 42
+    let f = jestemFunkcja;
     f();                   // 42
 
     let tablica = [zmienna, 'Tez jestem stringiem', f];
@@ -506,6 +507,22 @@
     }
 
     piwo.wypij(); //piję: Porter Bałtycki
+              </code></pre>
+          </section>
+          <section>
+              <h2>składnia</h2>
+              <pre><code>
+    let piwo = {
+      wypij: function() {
+        console.log('Sączę Portera Bałtyckiego');
+      }
+    }
+
+    setTimeout(piwo.wypij, 5000); //odpali się po 5 sekundach
+
+    setTimeout(function() {
+      console.log('Sączę Portera Bałtyckiego');
+    }, 5000);
               </code></pre>
           </section>
           <section>
