@@ -217,7 +217,6 @@
            <img style="width: 80%" src="lib/design.png"/>
          </section>
         </section>
-
         <section id="css" data-background-image="lib/repeatable_pattern_background.png">
           <section>
             <h2>Cascading Style Sheets <br>(CSS)</h2>
@@ -299,24 +298,28 @@
           </section>
           <section>
             <h2>Pseudo selektory</h2>
-            <pre class="fragment">
-              <code>
-    /* mouse over link */
-    a:hover {
-        color: #FF00FF;
-    }
+            <div class="fragment">
+              <pre>
+                <code>
+    /* mouse over link */               /* selected link */
+    a:hover {                           a:active {
+        color: #FF00FF;                     color: #0000FF;
+    }                                   }
+                </code>
+              </pre>
+              <pre>
+                <code>
+    /* focused element */               /* visited element */
+    .submit-button:focus {               #doctor:visited::before {
+        border: 1px solid #FF0000;        color: green;
+    }                                   }
 
-    /* selected link */
-    a:active {
-        color: #0000FF;
-    }
-
-    /* focused element */
-    button:focus {
-        border: 1px solid #FF0000;
-    }
-              </code>
-            </pre>
+                                        #doctor:visited::after {
+                                          color: pink;
+                                        }
+                </code>
+              </pre>
+            </div>
           </section>
           <section>
             <h2>Najczęściej spotykane właściwości CSS</h2>
@@ -336,10 +339,9 @@
               </ul>
               <li class="fragment">kolory<br>
                 <ul>
-                  <li>Hexadecimal</li>
-                  <li>RGB / RGBA</li>
-                  <li>HSL / HSLA</li>
-                  <li>Predefiniowane nazwy kolorów</li>
+                  <li>Predefiniowane nazwy kolorów <br> /* .roses {color: red;} */</li>
+                  <li>Hexadecimal <br> /* #chucknorris {color: #BADA55;} */</li>
+                  <li>RGB, HSL / RGBA, HSLA</li>                
                 </ul>
               </li>
             </ul>
@@ -361,15 +363,15 @@
             <ul>
               <li class="fragment">mówiąc „piszę w SASS czy LESS” mówimy „piszę kod CSS”</li>
               <li class="fragment">składnia CSS</li>
-              <li class="fragment">oprócz tego możemy posłużyć się wieloma dodatkowymi poleceniami, które już w „czystym” CSS nie były by poprawne</li>
+              <li class="fragment">oprócz tego możemy posłużyć się wieloma dodatkowymi poleceniami, które już w „czystym” CSS nie byłyby poprawne</li>
             </ul>
           </section>
           <section>
             <h2>Jak działają preprocesory CSS?</h2>
             <ul>
-              <li class="fragment">Bardzo prosto!</li>
-              <li class="fragment">Najpierw tworzymy nowy plik z odpowiednim rozszerzeniem (np. .scss, .less)</li>
-              <li class="fragment">następnie piszemy w nim kod CSS, używając dodatkowych możliwości oferowanych przez wybraną implementację, które już w „czystym” CSS nie były by poprawne</li>
+              <li class="fragment">bardzo prosto!</li>
+              <li class="fragment">najpierw tworzymy nowy plik z odpowiednim rozszerzeniem (np. .scss, .less)</li>
+              <li class="fragment">następnie piszemy w nim kod CSS, używając dodatkowych możliwości oferowanych przez wybraną implementację, które już w „czystym” CSS nie byłyby poprawne</li>
             </ul>
           </section>
           <section>
