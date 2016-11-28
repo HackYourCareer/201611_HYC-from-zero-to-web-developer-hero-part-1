@@ -38,3 +38,9 @@ http-server
 cd beerStorage
 dpd
 ```
+
+## Fill db with some data
+browse to:
+```
+http://127.0.0.1:8080/beerStorage/fill-db.html
+```
