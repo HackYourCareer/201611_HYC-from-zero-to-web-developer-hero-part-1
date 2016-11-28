@@ -40,12 +40,12 @@
             <br/><br/><br/>
             <h3 style="text-transform: none">Andżej<br/> &<br/> Web Development</h3>
             <div class="authors-footer" style="font-size:20px; position: absolute; right: 5%;">
-							<p>Łukasz Przezorski</p>
+              <p>Łukasz Przezorski</p>
               <p>Sebastian Domagała</p>
               <p>Alan Hadyk</p>
-              <p>Ivijan Hadija</p> 
-							<p>Kamil Kupczynski</p>
-						</div>
+              <p>Ivijan Hadija</p>
+              <p>Kamil Kupczynski</p>
+            </div>
           </section>
           <section>
             <h3 style="text-transform: none">Who is Andżej?</h3><br/><br/>
@@ -112,10 +112,9 @@
           </section>
           <section>
             <h2>HTML - a co to takiego?</h2>
-            <ul>
-              <li class="fragment"><strong>Hypertext Markup Language</strong> - czyli hipertekstowy język znaczników</li>
-              <li class="fragment">Dokument używany do wyświetlania zawartości na stronach WWW</li>
-            </ul>
+            <blockquote class="fragment">
+              Dokument używany do wyświetlania zawartości na stronach WWW
+            </blockquote>
           </section>
           <section>
             <h2>HTML - dlaczego warto?</h2>
@@ -129,36 +128,43 @@
             <h2>Struktura dokumentu HTML</h2>
             <pre class="fragment">
               <code>
-                &lt;!doctype html&gt;
-                &lt;html&gt;
-                  &lt;head&gt;
-                    &lt;meta charset="utf-8"&gt;
-                    &lt;title&gt;BeerMajster&lt;/title&gt;
-                    &lt;link rel="stylesheet" href="css/styles.css"&gt;
-                  &lt;/head&gt;
-                  &lt;body&gt;
-                    &lt;!-- Komentarz ignorowany przez przeglądarki --&gt;
-                    &lt;header&gt;&lt;/header&gt;
-                    &lt;main&gt;&lt;/main&gt;
-                    &lt;footer&gt;&lt;/footer&gt;
-                  &lt;/body&gt;
-                &lt;/html&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;BeerMajster&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Komentarz ignorowany przez przeglądarki --&gt;
+    &lt;header&gt;&lt;/header&gt;
+    &lt;main&gt;&lt;/main&gt;
+    &lt;footer&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
               </code>
             </pre>
           </section>
           <section>
-            <h2>Semantyka</h2>
-            <ul>
-              <li class="fragment">
-                Semantyka w HTML'u polega na nadawaniu treści odpowiedniego znaczenia i struktury poprzez używanie odpowiednich tagów.
-              </li>
-              <li class="fragment">
-                Semantyczny HTML ułatwia pracę z kodem i maintenance.
-              </li>
-              <li class="fragment">
-                Kod HTML'owy powinien zawierać jedynie informacje odnośnie treści, a nie wyglądu.
-              </li>
-            </ul>
+            <h2>Semantyczny vs. niesemantyczny kod</h2>
+            <pre class="fragment" style="display: inline-block; width: 45%;">
+              <code>
+// Źle!
+&lt;div&gt;
+  &lt;font size="6"&gt;&lt;b&gt;Tytuł&lt;/b&gt;&lt;/font&gt;
+  &lt;span&gt;&lt;i&gt;Paragraf&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+            <pre class="fragment" style="display: inline-block; width: 45%; margin-left: 40px;">
+              <code>
+// Dobrze :)
+&lt;article&gt;
+  &lt;h1&gt;Tytuł&lt;/h1&gt;
+  &lt;p&gt;Paragraf&lt;/p&gt;
+&lt;/article&gt;
+              </code>
+            </pre>
           </section>
           <section>
             <h2>Best practices</h2>
@@ -202,7 +208,7 @@
             </ul>
           </section>
         </section>
-        
+
         <section id="design" data-background-image="lib/repeatable_pattern_background.png">
          <section>
            <h2 style="text-transform: none">Dżesika & Design</h2>
@@ -437,7 +443,7 @@
               <pre class="fragment" data-fragment-index="1"><code>
     <script>
     // Twój kod JavaScript
-    </script>                
+    </script>
               </code></pre>
               <h6 class="fragment" data-fragment-index="2">lub</h6>
               <pre class="fragment" data-fragment-index="2"><code>
@@ -469,7 +475,7 @@
       nazwa: 'Porter Bałtycki',
       opis: 'Tu jest dużo tekstu, ale nie chciało mi się wpisywać',
       pojemność: 0.5,
-      
+
       wypij: function() {
         console.log('piję: ' + this.nazwa);
       }
