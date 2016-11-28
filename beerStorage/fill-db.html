@@ -1,0 +1,20 @@
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    let piwa = [{"nazwa":"Jasne Lekko Wędzone","opis":"Piwo wykonane według tej receptury zajęło I miejsce w konkursie Slovak Hombrewing Star 2010 w kategorii piw jasnych warzonych ze słodów o ekstrakcie poniżej 14Blg.","zacieranie":"Infuzyjne","fermentacja":"Dolna","ekstrakt":13,"brzeczka":22,"img":"jasne-lekko-wedzone.jpg","id":"4fc4ae5e8615380e"},{"nazwa":"Porter Bałtycki","opis":"Piwo wykonane według tej receptury zajęło w swojej kategorii III miejsce w VII KPD w Żywcu.","zacieranie":"Infuzyjne","fermentacja":"Dolna","ekstrakt":22,"brzeczka":17,"img":"porter-baltycki.jpg","id":"aea590c0c3920856"},{"nazwa":"Pils Niemiecki","opis":"Piwo wykonane według tej receptury zajęło w swojej kategorii III miejsce w Konkursie Piw Domowych Birofilia 2012.","zacieranie":"Dekokcyjne","fermentacja":"Dolna","ekstrakt":12,"brzeczka":28,"img":"pils-niemiecki.jpg","id":"e0baad351c342b4f"},{"nazwa":"Zakazany Owoc","opis":"Zakazany owoc powali Cię na glebę w zakazanym sadzie!","zacieranie":"Infuzyjne","fermentacja":"Górna","ekstrakt":15,"brzeczka":22,"img":"zakazany-owoc.jpg","id":"aa6b89f2e138a921"},{"nazwa":"Bycza Moc","opis":"Piwo zrobione z miłością, zawiera \"dodatek\" od byków z najlepszych hodowli. Doda Ci siły i wigoru!","zacieranie":"Infuzyjne","fermentacja":"Dolna","ekstrakt":19,"brzeczka":24,"img":"bycza-moc.jpg","id":"e46d0314a7fbc8c9"},{"nazwa":"Córka Młynarza","opis":"Piwo z charakterem. Żadna córka młynarza Ci się nie oprze! No chyba, że młynarz nakryje Was w swoim młynie - wtedy uciekaj.","zacieranie":"Dekokcyjne","fermentacja":"Górna","ekstrakt":16,"brzeczka":28,"img":"corka-mlynarza.jpg","id":"92e9f460a30cd834"},{"nazwa":"Oddech Sołtysa","opis":"Twój oddech powali wszystkich w promieniu 3km. Używać z rozwagą.","zacieranie":"Infuzyjne","fermentacja":"Dolna","ekstrakt":23,"brzeczka":21,"img":"oddech-soltysa.jpg","id":"aa72199e6e9d9b06"},{"nazwa":"Zemsta Teściowej","opis":"Od dawna szukałeś sposobu na to, by pozbyć się teściowej? A może Twój sąsiad z góry zbyt często remontuje w nocy? Wystarczą 2 butelki tego specyfiku, i po sprawie!","zacieranie":"Infuzyjne","fermentacja":"Górna","ekstrakt":56,"brzeczka":45,"img":"zemsta-tesciowej.jpg","id":"7f80483e4b3bb97f"}];
+   
+    piwa.forEach(function(piwo) {
+        $.ajax({
+            method: 'POST',
+            url: 'http://localhost:2403/piwa',
+            data: {
+                nazwa: piwo.nazwa,
+                opis: piwo.opis,
+                img: piwo.img,
+                brzeczka: piwo.brzeczka,
+                zacieranie: piwo.zacieranie,
+                fermantacja: piwo.fermentacja,
+                ekstrakt: piwo.ekstrakt
+            }
+        });
+    });
+</script>
