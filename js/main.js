@@ -11,6 +11,11 @@ $(document).ready(function() {
         }
     });
 
+    let beerTemplate = undefined;
+    grabBeerTemplate(function() {  //pobieramy szkielet (ten z wąsatymi nawiasami)
+        beerStorage.getAllBeers(appendBeerDivs);        
+    });
+
     $('#beer-tabs').tabs(); //jQuery ui plugin, nie zaprzątajmy sobie tym głowy
 
     //kolorowanie aktywnej zakładki
@@ -22,6 +27,15 @@ $(document).ready(function() {
         $this.addClass('a-btn--is-active');
     });
 });
+
+//zmienia strukturę html, dodając szkielet z danymi z serwera
+function appendBeerDivs(serverResponse) {
+    $('#beers-div').html('');
+    serverResponse.forEach(function(beerData) {
+        let beerHtml = beerTemplate(beerData);
+        $('#beers-div').append(beerHtml);
+    });
+}
 
 //nie będziemy patrzeć co tu się dzieje - nic waznego ;)
 function getAllCheckedOptions() {
