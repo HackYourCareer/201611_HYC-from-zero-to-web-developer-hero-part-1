@@ -449,69 +449,6 @@
               </ul>
           </section>
           <section>
-              <h2>Jak umieścić na stronie?</h2>
-              <h6 class="fragment" data-fragment-index="1">bezpośrednio w pliku .html</h6>
-              <pre class="fragment" data-fragment-index="1"><code>
-    <script>
-    // Twój kod JavaScript
-    </script>
-              </code></pre>
-              <h6 class="fragment" data-fragment-index="2">lub</h6>
-              <pre class="fragment" data-fragment-index="2"><code>
-    <script src="js/plugins.js"></script>
-              </code></pre>
-          </section>
-          <section>
-              <h2>składnia</h2>
-              <pre><code>
-    let zmienna = 'Jestem Stringiem!';
-    zmienna = 42; //już nie
-
-    function jestemFunkcja() {
-      console.log(zmienna);
-    }
-
-    jestemFunkcja();       // 42
-    let f = jestemFunkcja;
-    f();                   // 42
-
-    let tablica = [zmienna, 'Tez jestem stringiem', f];
-    tablica[2](); // 42
-              </code></pre>
-          </section>
-          <section>
-              <h2>składnia</h2>
-              <pre><code>
-    let piwo = {
-      nazwa: 'Porter Bałtycki',
-      opis: 'Tu jest dużo tekstu, ale nie chciało mi się wpisywać',
-      pojemność: 0.5,
-
-      wypij: function() {
-        console.log('piję: ' + this.nazwa);
-      }
-    }
-
-    piwo.wypij(); //piję: Porter Bałtycki
-              </code></pre>
-          </section>
-          <section>
-              <h2>składnia</h2>
-              <pre><code>
-    let piwo = {
-      wypij: function() {
-        console.log('Sączę Portera Bałtyckiego');
-      }
-    }
-
-    setTimeout(piwo.wypij, 5000); //odpali się po 5 sekundach
-
-    setTimeout(function() {
-      console.log('Sączę Portera Bałtyckiego');
-    }, 5000);
-              </code></pre>
-          </section>
-          <section>
               <h2>przykłady</h2>
           </section>
           <section>
