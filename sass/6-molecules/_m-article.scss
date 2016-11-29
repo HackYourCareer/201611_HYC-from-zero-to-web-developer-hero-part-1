@@ -3,30 +3,68 @@
 /* _____ ARTICLE _____ */
 
 // Component variables
-$m-article--box-shadow: $box-shadow-secondary;
-$m-article--background: #fff;
+$m-article-box-shadow: $box-shadow-secondary;
+$m-article-background: #fff;
 
-$m-article__content--padding: 2.5rem;
+$m-article__content-padding: 2.5rem;
 
-$m-article__date--color: rgba(#4a4c4c, 0.87);
-$m-article__date--margin: 0 0 .55rem;
-$m-article__date--font-family: $font-open-sans;
-$m-article__date--font-size: 1.4rem;
-$m-article__date--font-weight: 600;
+$m-article__date-text-color: rgba($color-gray-dark-tertiary, 0.87);
+$m-article__date-margin: 0 0 .55rem;
+$m-article__date-font-family: $font-open-sans;
+$m-article__date-font-size: 1.4rem;
+$m-article__date-font-weight: 600;
 
-$m-article__title--color: #000;
-$m-article__title--margin: 0 0 1.5rem;
-$m-article__title--line-height: 2.7rem;
-$m-article__title--font-family: $font-open-sans;
-$m-article__title--font-size: 2.1rem;
-$m-article__title--font-weight: 400;
+$m-article__title-text-color: #000;
+$m-article__title-margin: 0 0 1.5rem;
+$m-article__title-line-height: 2.7rem;
+$m-article__title-font-family: $font-open-sans;
+$m-article__title-font-size: 2.1rem;
+$m-article__title-font-weight: 400;
 
-$m-article__description--color: $text-primary;
-$m-article__description--margin: 0;
-$m-article__description--line-height: 2.3rem;
-$m-article__description--font-family: $font-open-sans;
-$m-article__description--font-size: 1.5rem;
-$m-article__description--font-weight: 400;
+$m-article__description-text-color: $text-primary;
+$m-article__description-margin: 0;
+$m-article__description-line-height: 2.3rem;
+$m-article__description-font-family: $font-open-sans;
+$m-article__description-font-size: 1.5rem;
+$m-article__description-font-weight: 400;
 
 .m-article {
+    box-shadow: $m-article-box-shadow;
+    background: $m-article-background;
+
+    &__content {
+        padding: $m-article__content-padding;
+    }
+
+    &__date {
+        color : $m-article__date-text-color;
+        margin: $m-article__date-margin;
+        font  : {
+            family: $m-article__date-font-family;
+            size  : $m-article__date-font-size;
+            weight: $m-article__date-font-weight;
+        }
+    }
+
+    &__title {
+        color      : $m-article__title-text-color;
+        margin     : $m-article__title-margin;
+        line-height: $m-article__title-line-height;
+        font       : {
+            family: $m-article__title-font-family;
+            size  : $m-article__title-font-size;
+            weight: $m-article__title-font-weight;
+        }
+    }
+
+    &__description {
+        color      : $m-article__description-text-color;
+        margin     : $m-article__description-margin;
+        line-height: $m-article__description-line-height;
+        font       : {
+            family: $m-article__description-font-family;
+            size  : $m-article__description-font-size;
+            weight: $m-article__description-font-weight;
+        }
+    }
 }

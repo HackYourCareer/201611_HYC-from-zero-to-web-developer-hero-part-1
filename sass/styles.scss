@@ -53,10 +53,10 @@
   can combine them together to form a search form molecule.
  */
 @import '6-molecules/m-article';
-// @import '6-molecules/m-filter';
-// @import '6-molecules/m-form';
-// @import '6-molecules/m-item';
-// @import '6-molecules/m-navigation';
+@import '6-molecules/m-filter';
+@import '6-molecules/m-form';
+@import '6-molecules/m-item';
+@import '6-molecules/m-navigation';
 
 // Organisms
 /*
@@ -65,7 +65,7 @@
  */
 // @import '7-organisms/o-content';
 // @import '7-organisms/o-footer';
-// @import '7-organisms/o-header';
+@import '7-organisms/o-header';
 
 // Utilities
 /*
