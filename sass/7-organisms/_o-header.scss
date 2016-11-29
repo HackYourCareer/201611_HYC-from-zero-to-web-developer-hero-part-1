@@ -3,15 +3,18 @@
 /* _____ HEADER _____ */
 
 // Component variables
-$header--background: $background-primary; // #1279bf
-$header--box-shadow: $box-shadow-default; // 0 .3rem .7rem 0 rgba(0, 0, 0, 0.35)
-$header--height: 11rem;
-$header--position : fixed;
-$header--left : 0;
-$header--right : 0;
-$header--top : 0;
-$header--z-index : $z-index-top;
-// @include flex-container();
+$header-background: $background-primary;
+$header-box-shadow: $box-shadow-default;
+$header-height: 11rem;
 
 .o-header {
+    background: $header-background;
+    box-shadow: $header-box-shadow;
+    position  : fixed;
+    left      : 0;
+    right     : 0;
+    top       : 0;
+    height    : $header-height;
+    z-index   : $z-index-top;
+    @include flex-container();
 }

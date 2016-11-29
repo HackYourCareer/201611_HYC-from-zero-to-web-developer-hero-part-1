@@ -3,11 +3,9 @@
 /* _____ FOOTER _____ */
 
 // Component variables
-$footer-background: $color-gray-light-quaternary;
-$footer-height: 10rem;
+$footer--background: $color-gray-light-quaternary;
+$footer--height: 10rem;
+// @include flex-container();
 
 .o-footer {
-    background: $footer-background;
-    height    : $footer-height;
-    @include flex-container();
 }
