@@ -4,34 +4,34 @@
 /*
   Bourbon documentation: http://bourbon.io/docs/
  */
-// @import 'bourbon/bourbon';
+@import 'bourbon/bourbon';
 
 // Utilities
-// @import '1-tools/fonts';
-// @import '1-tools/grid';
-// @import '1-tools/icons';
-// @import '1-tools/mixins';
-// @import '1-tools/normalize';
-// @import '1-tools/states';
-// @import '1-tools/variables';
+@import '1-tools/fonts';
+@import '1-tools/grid';
+@import '1-tools/icons';
+@import '1-tools/mixins';
+@import '1-tools/normalize';
+@import '1-tools/states';
+@import '1-tools/variables';
 
 // Vendor
 
 // Base
-// @import '3-base/basic-styles';
+@import '3-base/basic-styles';
 
 // Quarks
 /*
   This directory defines the basic building blocks of the website, including paragraphs, tables, images and links.
   Therefore, this directory should focus only on default HTML elements. These components are called quarks, and they are only basic HTML tags (without classes or IDs).
 */
-// @import '4-quarks/anchors';
-// @import '4-quarks/headings';
-// @import '4-quarks/images';
-// @import '4-quarks/inputs';
-// @import '4-quarks/lists';
-// @import '4-quarks/paragraphs';
-// @import '4-quarks/section';
+@import '4-quarks/anchors';
+@import '4-quarks/headings';
+@import '4-quarks/images';
+@import '4-quarks/inputs';
+@import '4-quarks/lists';
+@import '4-quarks/paragraphs';
+@import '4-quarks/section';
 
 // Atoms
 /*
@@ -42,7 +42,7 @@
 // @import '5-atoms/a-header';
 // @import '5-atoms/a-input';
 // @import '5-atoms/a-label';
-// @import '5-atoms/a-link';
+@import '5-atoms/a-link';
 // @import '5-atoms/a-notification';
 // @import '5-atoms/a-paragraph';
 // @import '5-atoms/a-textarea';
@@ -72,8 +72,4 @@
   Utilities should be placed at the end of the stylesheet, because
   they have to overwrite anything else.
  */
-// @import '8-utilities/utilities';
-
-img {
-  width: 150px;
-}
+@import '8-utilities/utilities';
