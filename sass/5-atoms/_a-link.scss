@@ -4,12 +4,23 @@
 /* _____ LINKS _____ */
 
 // Component variables
-$a-link-transition: all 300ms ease-in-out;
-$a-link--primary--color: #1279bf;
-//&:active, &:hover, &:focus,
-$a-link--primary--color-hover: #fff;
-$a-link--primary--background-hover: #1279bf;
-$a-link--primary--text-decoration: none;
+$a-link-transition: $transition-default;
+$a-link--primary-text-color: $link-primary;
+$a-link--primary-text-color-hover: #fff;
+$a-link--primary-background-hover: $link-primary;
 
 .a-link {
+    transition: $a-link-transition;
+
+    &--primary {
+        color: $a-link--primary-text-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color          : $a-link--primary-text-color-hover;
+            background     : $a-link--primary-background-hover;
+            text-decoration: none;
+        }
+    }
 }

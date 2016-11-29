@@ -37,15 +37,15 @@
 /*
   Atoms are basic tags, such as form labels, inputs or buttons. Atoms are abstract; they provide a useful reference and allow you to see all your global styles laid out at a glance.
  */
-// @import '5-atoms/a-btn';
-// @import '5-atoms/a-checkbox';
-// @import '5-atoms/a-header';
-// @import '5-atoms/a-input';
-// @import '5-atoms/a-label';
+@import '5-atoms/a-btn';
+@import '5-atoms/a-checkbox';
+@import '5-atoms/a-header';
+@import '5-atoms/a-input';
+@import '5-atoms/a-label';
 @import '5-atoms/a-link';
-// @import '5-atoms/a-notification';
-// @import '5-atoms/a-paragraph';
-// @import '5-atoms/a-textarea';
+@import '5-atoms/a-notification';
+@import '5-atoms/a-paragraph';
+@import '5-atoms/a-textarea';
 
 // Molecules
 /*
